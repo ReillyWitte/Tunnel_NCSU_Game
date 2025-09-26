@@ -5,6 +5,8 @@ extends CharacterBody2D
 var dialogue_box: Label
 var close_button: Button
 var dialogue_lines: Array = ["Hello, detective!", "Welcome to our train."]
+var in_dialogue_range = false
+var interactable_reference = null
 
 var current_line: int = 0
 var line_timer: float = 0
@@ -25,6 +27,11 @@ func _ready():
 		position = Vector2(110,345)
 	elif Globals.door_side == Globals.RIGHT:
 		position = Vector2(1040,345)
+		
+	var interactables = get_tree().get_nodes_in_group("interactable")
+	for interactable in interactables:
+		interactable.connect("player_entered", Callable(self, "_on_interactable_player_entered"))
+		interactable.connect("player_exited", Callable(self, "_on_interactable_player_exited"))
 
 func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
@@ -49,3 +56,13 @@ func _on_close_button_pressed():
 	dialogue_box.visible = false
 	close_button.visible = false
 	current_line = 0
+	
+func _on_interactable_player_entered(interactable):
+	in_dialogue_range = true
+	interactable_reference = interactable
+	print("i enter")
+
+func _on_interactable_player_exited():
+	in_dialogue_range = false
+	interactable_reference = null
+	print("i exit")

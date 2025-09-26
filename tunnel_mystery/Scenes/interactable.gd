@@ -5,7 +5,8 @@ var entered = 0
 func _ready():
 	$Area2D.body_entered.connect(_on_area_2d_body_entered)
 	$Area2D.body_exited.connect(_on_area_2d_body_exited)
-	print("Door ready")
+	print("Interactable ready")
+	add_to_group("interactable")
 
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("player"):
