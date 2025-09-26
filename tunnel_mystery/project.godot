@@ -15,6 +15,10 @@ run/main_scene="uid://cml8ag50tpsmv"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Globals="*res://globals.gd"
+
 [global_group]
 
 player="The player character"

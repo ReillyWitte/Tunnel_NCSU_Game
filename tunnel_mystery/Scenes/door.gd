@@ -3,6 +3,9 @@ extends StaticBody2D
 
 var entered = 0
 
+@export var next_car: String
+@export var next_side: int
+
 func _ready():
 	$InteractZone.body_entered.connect(_on_interact_zone_body_entered)
 	$InteractZone.body_exited.connect(_on_interact_zone_body_exited)
@@ -19,4 +22,4 @@ func _on_interact_zone_body_exited(body):
 	
 func _process(_delta):
 	if entered == 1 and Input.is_action_just_pressed("ui_accept"):
-		get_tree().change_scene_to_file("res://Scenes/test_car.tscn")
+		Globals.change_car(next_car, next_side)
