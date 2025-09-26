@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://cml8ag50tpsmv"]
+[gd_scene load_steps=9 format=3 uid="uid://cml8ag50tpsmv"]
 
 [ext_resource type="PackedScene" uid="uid://yegohmvxjpig" path="res://Scenes/player.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://comnemed8c1i8" path="res://Scenes/main.gd" id="1_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://jdgmgd2i5rws" path="res://Scenes/door.tscn" id="2_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://c6qnesbh3nh6u" path="res://Scenes/interactable.tscn" id="4_jjvhh"]
 
@@ -17,6 +18,7 @@ distance = -13.0
 normal = Vector2(1, 0)
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_jjvhh")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(1152, 648)
@@ -56,8 +58,8 @@ next_side = 1
 position = Vector2(26, 389)
 scale = Vector2(-0.5, 0.5)
 
-[node name="Node2D" parent="." instance=ExtResource("1_ig7tw")]
-position = Vector2(571, 331)
-
 [node name="Interactable" parent="." instance=ExtResource("4_jjvhh")]
 position = Vector2(161, -240)
+
+[node name="Node2D" parent="." instance=ExtResource("1_ig7tw")]
+position = Vector2(571, 331)
