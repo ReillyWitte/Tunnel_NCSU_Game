@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://jdgmgd2i5rws"]
+
+[ext_resource type="Script" uid="uid://bfoe3y83as26e" path="res://Scenes/door.gd" id="1_p0e35"]
+[ext_resource type="Texture2D" uid="uid://bjlusuvaaxb0" path="res://Sprites/pixel_door.png" id="1_w6aom"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p0e35"]
+size = Vector2(248, 212)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w6aom"]
+radius = 224.181
+
+[node name="Door" type="StaticBody2D"]
+script = ExtResource("1_p0e35")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -91)
+shape = SubResource("RectangleShape2D_p0e35")
+
+[node name="DoorSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_w6aom")
+
+[node name="InteractZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractZone"]
+position = Vector2(1, 217)
+shape = SubResource("CircleShape2D_w6aom")
+
+[connection signal="body_entered" from="InteractZone" to="." method="_on_interact_zone_body_entered"]
+[connection signal="body_exited" from="InteractZone" to="." method="_on_interact_zone_body_exited"]

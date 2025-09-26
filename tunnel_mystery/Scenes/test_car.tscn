@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://ts8qlbvwjy2r"]
+
+[ext_resource type="PackedScene" uid="uid://cml8ag50tpsmv" path="res://Scenes/main.tscn" id="1_ndwjx"]
+[ext_resource type="Texture2D" uid="uid://bjlusuvaaxb0" path="res://Sprites/pixel_door.png" id="2_tqt02"]
+
+[node name="Main" instance=ExtResource("1_ndwjx")]
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="6"]
+position = Vector2(135.75, 260.75)
+scale = Vector2(0.374494, 0.74173)
+texture = ExtResource("2_tqt02")

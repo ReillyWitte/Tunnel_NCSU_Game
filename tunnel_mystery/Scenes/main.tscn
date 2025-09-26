@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://cml8ag50tpsmv"]
+
+[ext_resource type="PackedScene" uid="uid://yegohmvxjpig" path="res://player.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://jdgmgd2i5rws" path="res://Scenes/door.tscn" id="2_bo1nx"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ig7tw"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0xm2m"]
+normal = Vector2(0, 1)
+distance = -13.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_h2yge"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1bvp3"]
+normal = Vector2(1, 0)
+
+[node name="Main" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(1152, 648)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -288)
+shape = SubResource("WorldBoundaryShape2D_ig7tw")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(1152, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(-613, 15)
+shape = SubResource("WorldBoundaryShape2D_0xm2m")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(0, 648)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(549, 0)
+shape = SubResource("WorldBoundaryShape2D_h2yge")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2(0, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(0, 306)
+shape = SubResource("WorldBoundaryShape2D_1bvp3")
+
+[node name="Door" parent="." instance=ExtResource("2_bo1nx")]
+position = Vector2(1045, 319)
+scale = Vector2(0.5, 0.5)
+
+[node name="Node2D" parent="." instance=ExtResource("1_ig7tw")]
+position = Vector2(540, 360)
