@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://vwqivyfyvgfq"]
+
+[ext_resource type="Script" uid="uid://c3kqca37q6ptr" path="res://Scenes/interactable.gd" id="1_m0ttr"]
+[ext_resource type="Texture2D" uid="uid://wevw37f4nc78" path="res://Sprites/Cowstatic.png" id="2_1rm1i"]
+[ext_resource type="Texture2D" uid="uid://0lfh4b22ylca" path="res://Sprites/cowwalking1.png" id="3_12dvd"]
+[ext_resource type="Texture2D" uid="uid://b4njnmu075f22" path="res://Sprites/cowwalking2.png" id="4_71a7e"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h87bl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1rm1i")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_12dvd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_71a7e")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmsje"]
+size = Vector2(123, 106)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8s6bd"]
+radius = 100.08
+
+[node name="Interactable" type="StaticBody2D"]
+script = ExtResource("1_m0ttr")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(635, 307)
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_h87bl")
+animation = &"walking"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(636.5, 336)
+shape = SubResource("RectangleShape2D_pmsje")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(634, 309)
+shape = SubResource("CircleShape2D_8s6bd")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

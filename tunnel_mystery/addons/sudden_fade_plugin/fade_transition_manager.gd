@@ -11,7 +11,7 @@ enum ANIMATION {
 	FADE_OUT,
 	}
 	
-@export var _fade_length : float = .4
+@export var _fade_length : float = .7
 @export var next_scene : PackedScene
 
 var _fade_in_player_scene = preload("res://addons/sudden_fade_plugin/fade_in.tscn")
