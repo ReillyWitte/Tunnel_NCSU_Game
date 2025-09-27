@@ -1,0 +1,179 @@
+[gd_scene load_steps=13 format=3 uid="uid://bfn7xud7mt7bl"]
+
+[ext_resource type="PackedScene" uid="uid://cml8ag50tpsmv" path="res://Scenes/main.tscn" id="1_ndwjx"]
+[ext_resource type="Texture2D" uid="uid://dxihhccj250qo" path="res://Sprites/Chair.png" id="3_tqt02"]
+[ext_resource type="PackedScene" uid="uid://ch8b8vbedujkh" path="res://Scenes/NPCs/alligator.tscn" id="4_2lnuo"]
+[ext_resource type="PackedScene" uid="uid://c0jn688lpdb4b" path="res://Scenes/NPCs/goat.tscn" id="5_2lnuo"]
+[ext_resource type="PackedScene" uid="uid://bmu8wlits5ww7" path="res://addons/sudden_fade_plugin/demo/room2.tscn" id="7_snxeu"]
+[ext_resource type="Script" uid="uid://c6215vuol8ms2" path="res://addons/sudden_fade_plugin/fade_transition_manager.gd" id="7_xo6ao"]
+[ext_resource type="Texture2D" uid="uid://b070q1gfaxhg2" path="res://Sprites/tunnelbackground.png" id="8_snxeu"]
+[ext_resource type="Texture2D" uid="uid://nrf0pf5p8mnm" path="res://Sprites/tunnelbackgrounddark.PNG" id="9_2lnuo"]
+[ext_resource type="Script" path="res://Scenes/tunnel.gd" id="10_w40gk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yipkt"]
+size = Vector2(81.5, 135)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2lnuo"]
+texture = ExtResource("8_snxeu")
+
+[sub_resource type="TileSet" id="TileSet_w40gk"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_2lnuo")
+
+[node name="Main" instance=ExtResource("1_ndwjx")]
+
+[node name="FadeLayer#FadeTransitionManager" type="ColorRect" parent="." index="1"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("7_xo6ao")
+metadata/_custom_type_script = "uid://c6215vuol8ms2"
+
+[node name="Door" parent="." index="5"]
+next_car = ""
+
+[node name="Door2" parent="." index="6"]
+next_car = "res://Scenes/coach2.tscn"
+next_side = 2
+
+[node name="Chair1" type="StaticBody2D" parent="." index="10"]
+position = Vector2(-10, -5)
+
+[node name="Sprite2D" type="Sprite2D" parent="Chair1" index="0"]
+position = Vector2(158, 603)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("3_tqt02")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chair1" index="1"]
+position = Vector2(152, 615)
+scale = Vector2(0.8, 0.8)
+shape = SubResource("RectangleShape2D_yipkt")
+
+[node name="Chair2" type="StaticBody2D" parent="." index="11"]
+z_index = -170
+position = Vector2(-11, -292)
+
+[node name="Sprite2D" type="Sprite2D" parent="Chair2" index="0"]
+position = Vector2(158, 603)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("3_tqt02")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chair2" index="1"]
+position = Vector2(152, 615)
+scale = Vector2(0.8, 0.8)
+shape = SubResource("RectangleShape2D_yipkt")
+
+[node name="Chair3" type="StaticBody2D" parent="." index="12"]
+z_index = -170
+position = Vector2(266, -295)
+
+[node name="Sprite2D" type="Sprite2D" parent="Chair3" index="0"]
+position = Vector2(158, 603)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("3_tqt02")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chair3" index="1"]
+position = Vector2(152, 615)
+scale = Vector2(0.8, 0.8)
+shape = SubResource("RectangleShape2D_yipkt")
+
+[node name="Chair4" type="StaticBody2D" parent="." index="13"]
+position = Vector2(266, -6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Chair4" index="0"]
+position = Vector2(158, 603)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("3_tqt02")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chair4" index="1"]
+position = Vector2(152, 615)
+scale = Vector2(0.8, 0.8)
+shape = SubResource("RectangleShape2D_yipkt")
+
+[node name="Chair5" type="StaticBody2D" parent="." index="14"]
+z_index = -170
+position = Vector2(543, -295)
+
+[node name="Sprite2D" type="Sprite2D" parent="Chair5" index="0"]
+position = Vector2(158, 603)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("3_tqt02")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chair5" index="1"]
+position = Vector2(152, 615)
+scale = Vector2(0.8, 0.8)
+shape = SubResource("RectangleShape2D_yipkt")
+
+[node name="Chair6" type="StaticBody2D" parent="." index="15"]
+position = Vector2(543, -5)
+
+[node name="Sprite2D" type="Sprite2D" parent="Chair6" index="0"]
+position = Vector2(158, 603)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("3_tqt02")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chair6" index="1"]
+position = Vector2(152, 615)
+scale = Vector2(0.8, 0.8)
+shape = SubResource("RectangleShape2D_yipkt")
+
+[node name="Chair7" type="StaticBody2D" parent="." index="16"]
+z_index = -170
+position = Vector2(809, -295)
+
+[node name="Sprite2D" type="Sprite2D" parent="Chair7" index="0"]
+position = Vector2(158, 603)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("3_tqt02")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chair7" index="1"]
+position = Vector2(152, 615)
+scale = Vector2(0.8, 0.8)
+shape = SubResource("RectangleShape2D_yipkt")
+
+[node name="Chair8" type="StaticBody2D" parent="." index="17"]
+position = Vector2(809, -5)
+
+[node name="Sprite2D" type="Sprite2D" parent="Chair8" index="0"]
+position = Vector2(158, 603)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("3_tqt02")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chair8" index="1"]
+position = Vector2(152, 615)
+scale = Vector2(0.8, 0.8)
+shape = SubResource("RectangleShape2D_yipkt")
+
+[node name="Alligator" parent="." index="18" instance=ExtResource("4_2lnuo")]
+position = Vector2(-465, -44)
+timeline = "alligator_timeline"
+
+[node name="Goat" parent="." index="19" instance=ExtResource("5_2lnuo")]
+position = Vector2(82, 243)
+timeline = "goat_timeline"
+
+[node name="FadeTransitionManager" type="ColorRect" parent="." index="20"]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("7_xo6ao")
+next_scene = ExtResource("7_snxeu")
+metadata/_custom_type_script = "uid://c6215vuol8ms2"
+
+[node name="TileMap" type="TileMap" parent="." index="21"]
+position = Vector2(156, 138)
+tile_set = SubResource("TileSet_w40gk")
+format = 2
+
+[node name="tunnel" type="ParallaxBackground" parent="." index="22"]
+script = ExtResource("10_w40gk")
+scroll_speed = Vector2(-500, 0)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="tunnel" index="0"]
+texture_repeat = 2
+motion_scale = Vector2(2, 2)
+motion_mirroring = Vector2(1000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="tunnel/ParallaxLayer" index="0"]
+texture_repeat = 2
+position = Vector2(561, 356)
+texture = ExtResource("9_2lnuo")

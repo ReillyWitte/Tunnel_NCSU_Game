@@ -77,6 +77,10 @@ layout/default_style="res://DialogStuff/Characters/custom_style.tres"
 glossary/default_case_sensitive=true
 variables={}
 
+[editor]
+
+version_control/autoload_on_startup=true
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")

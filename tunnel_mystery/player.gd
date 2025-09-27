@@ -29,9 +29,9 @@ func _ready():
 	add_child(close_button)
 	
 	if Globals.door_side == Globals.LEFT:
-		position = Vector2(110,345)
+		position = Vector2(110,400)
 	elif Globals.door_side == Globals.RIGHT:
-		position = Vector2(1040,345)
+		position = Vector2(1040,400)
 		
 	var interactables = get_tree().get_nodes_in_group("interactable")
 	for interactable in interactables:
