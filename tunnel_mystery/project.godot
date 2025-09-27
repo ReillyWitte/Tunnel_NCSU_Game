@@ -23,10 +23,10 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"detective_crowford": "res://Dialog_Timelines/detective_crowford.dch"
+"detective_crowford": "res://DialogStuff/detective_crowford.dch"
 }
 directories/dtl_directory={
-"timeline": "res://Dialog_Timelines/timeline.dtl"
+"timeline": "res://DialogStuff/timeline.dtl"
 }
 layout/style_directory={}
 
