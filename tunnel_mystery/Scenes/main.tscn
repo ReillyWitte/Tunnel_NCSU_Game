@@ -49,8 +49,7 @@ shape = SubResource("WorldBoundaryShape2D_1bvp3")
 [node name="Door" parent="." instance=ExtResource("2_bo1nx")]
 position = Vector2(1123, 497)
 scale = Vector2(0.5, 0.5)
-next_car = "res://Scenes/test_car.tscn"
-next_side = 1
+next_car = "res://Scenes/coach1.tscn"
 
 [node name="Door2" parent="." instance=ExtResource("2_bo1nx")]
 position = Vector2(28, 497)

@@ -30,6 +30,10 @@ directories/dtl_directory={
 }
 layout/style_directory={}
 
+[editor]
+
+version_control/autoload_on_startup=true
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")

@@ -1,0 +1,182 @@
+[gd_scene load_steps=11 format=3 uid="uid://ts8qlbvwjy2r"]
+
+[ext_resource type="PackedScene" uid="uid://cml8ag50tpsmv" path="res://Scenes/main.tscn" id="1_ndwjx"]
+[ext_resource type="Script" uid="uid://dxa4gdu2rtvkd" path="res://interactable.gd" id="3_iidp6"]
+[ext_resource type="Texture2D" uid="uid://dxihhccj250qo" path="res://Sprites/Chair.png" id="3_tqt02"]
+[ext_resource type="Texture2D" uid="uid://bmkbl3e1gpii2" path="res://Sprites/Gator.png" id="4_2h7bt"]
+[ext_resource type="Texture2D" uid="uid://crmfx3hill35p" path="res://Sprites/Goat.png" id="5_2h7bt"]
+[ext_resource type="PackedScene" uid="uid://bmu8wlits5ww7" path="res://addons/sudden_fade_plugin/demo/room2.tscn" id="7_snxeu"]
+[ext_resource type="Script" uid="uid://c6215vuol8ms2" path="res://addons/sudden_fade_plugin/fade_transition_manager.gd" id="7_xo6ao"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yipkt"]
+size = Vector2(81.5, 135)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iidp6"]
+size = Vector2(113.864, 138.864)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4rpl3"]
+size = Vector2(97.4659, 80)
+
+[node name="Main" instance=ExtResource("1_ndwjx")]
+
+[node name="FadeLayer#FadeTransitionManager" type="ColorRect" parent="." index="1"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("7_xo6ao")
+metadata/_custom_type_script = "uid://c6215vuol8ms2"
+
+[node name="Door" parent="." index="5"]
+next_car = ""
+
+[node name="Door2" parent="." index="6"]
+next_car = "res://Scenes/coach2.tscn"
+next_side = 2
+
+[node name="Chair1" type="StaticBody2D" parent="." index="10"]
+position = Vector2(-10, -5)
+
+[node name="Sprite2D" type="Sprite2D" parent="Chair1" index="0"]
+position = Vector2(158, 603)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("3_tqt02")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chair1" index="1"]
+position = Vector2(152, 615)
+scale = Vector2(0.8, 0.8)
+shape = SubResource("RectangleShape2D_yipkt")
+
+[node name="Chair2" type="StaticBody2D" parent="." index="11"]
+z_index = -170
+position = Vector2(-11, -292)
+
+[node name="Sprite2D" type="Sprite2D" parent="Chair2" index="0"]
+position = Vector2(158, 603)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("3_tqt02")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chair2" index="1"]
+position = Vector2(152, 615)
+scale = Vector2(0.8, 0.8)
+shape = SubResource("RectangleShape2D_yipkt")
+
+[node name="Chair3" type="StaticBody2D" parent="." index="12"]
+z_index = -170
+position = Vector2(266, -295)
+
+[node name="Sprite2D" type="Sprite2D" parent="Chair3" index="0"]
+position = Vector2(158, 603)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("3_tqt02")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chair3" index="1"]
+position = Vector2(152, 615)
+scale = Vector2(0.8, 0.8)
+shape = SubResource("RectangleShape2D_yipkt")
+
+[node name="Chair4" type="StaticBody2D" parent="." index="13"]
+position = Vector2(266, -6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Chair4" index="0"]
+position = Vector2(158, 603)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("3_tqt02")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chair4" index="1"]
+position = Vector2(152, 615)
+scale = Vector2(0.8, 0.8)
+shape = SubResource("RectangleShape2D_yipkt")
+
+[node name="Chair5" type="StaticBody2D" parent="." index="14"]
+z_index = -170
+position = Vector2(543, -295)
+
+[node name="Sprite2D" type="Sprite2D" parent="Chair5" index="0"]
+position = Vector2(158, 603)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("3_tqt02")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chair5" index="1"]
+position = Vector2(152, 615)
+scale = Vector2(0.8, 0.8)
+shape = SubResource("RectangleShape2D_yipkt")
+
+[node name="Chair6" type="StaticBody2D" parent="." index="15"]
+position = Vector2(543, -5)
+
+[node name="Sprite2D" type="Sprite2D" parent="Chair6" index="0"]
+position = Vector2(158, 603)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("3_tqt02")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chair6" index="1"]
+position = Vector2(152, 615)
+scale = Vector2(0.8, 0.8)
+shape = SubResource("RectangleShape2D_yipkt")
+
+[node name="Chair7" type="StaticBody2D" parent="." index="16"]
+z_index = -170
+position = Vector2(809, -295)
+
+[node name="Sprite2D" type="Sprite2D" parent="Chair7" index="0"]
+position = Vector2(158, 603)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("3_tqt02")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chair7" index="1"]
+position = Vector2(152, 615)
+scale = Vector2(0.8, 0.8)
+shape = SubResource("RectangleShape2D_yipkt")
+
+[node name="Chair8" type="StaticBody2D" parent="." index="17"]
+position = Vector2(809, -5)
+
+[node name="Sprite2D" type="Sprite2D" parent="Chair8" index="0"]
+position = Vector2(158, 603)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("3_tqt02")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chair8" index="1"]
+position = Vector2(152, 615)
+scale = Vector2(0.8, 0.8)
+shape = SubResource("RectangleShape2D_yipkt")
+
+[node name="Alligator" type="Area2D" parent="." index="18"]
+z_index = -5
+script = ExtResource("3_iidp6")
+metadata/_custom_type_script = "uid://dxa4gdu2rtvkd"
+
+[node name="Sprite2D" type="Sprite2D" parent="Alligator" index="0"]
+position = Vector2(184, 261)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("4_2h7bt")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Alligator" index="1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Alligator/StaticBody2D" index="0"]
+position = Vector2(179.375, 261)
+scale = Vector2(1.1, 1.1)
+shape = SubResource("RectangleShape2D_iidp6")
+
+[node name="Goat" type="Area2D" parent="." index="19"]
+script = ExtResource("3_iidp6")
+metadata/_custom_type_script = "uid://dxa4gdu2rtvkd"
+
+[node name="Sprite2D" type="Sprite2D" parent="Goat" index="0"]
+position = Vector2(722, 527)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("5_2h7bt")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Goat" index="1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Goat/StaticBody2D" index="0"]
+position = Vector2(724.394, 571)
+scale = Vector2(1.1, 1.1)
+shape = SubResource("RectangleShape2D_4rpl3")
+
+[node name="FadeTransitionManager" type="ColorRect" parent="." index="20"]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("7_xo6ao")
+next_scene = ExtResource("7_snxeu")
+metadata/_custom_type_script = "uid://c6215vuol8ms2"
