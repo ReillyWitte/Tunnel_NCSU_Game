@@ -5,6 +5,8 @@ var entered = 0
 
 @export var next_car: String
 @export var next_side: int
+@onready var doorAudio = $doorSound
+
 
 
 func _ready():
@@ -19,6 +21,7 @@ func _on_interact_zone_body_entered(body):
 		print("entered")
 
 func _on_interact_zone_body_exited(body):
+	doorAudio.play()
 	entered = 0
 	print("exit")
 	

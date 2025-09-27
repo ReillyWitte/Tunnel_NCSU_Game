@@ -28,3 +28,7 @@ var frog_dialog = 0.0
 # Item Flags
 var coin = 0
 var lockpick = 1
+
+# Other Flags
+var game_start = 0
+var bat_wake = 0
