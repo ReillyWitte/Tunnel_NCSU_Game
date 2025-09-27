@@ -22,3 +22,4 @@ var cow_dialog = 0.0
 var cat_dialog = 0.0
 var rhino_dialog = 0.0
 var dog_dialog = 0.0
+var frog_dialog = 0.0
