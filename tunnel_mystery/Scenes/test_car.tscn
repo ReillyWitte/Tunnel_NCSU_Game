@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://ts8qlbvwjy2r"]
+[gd_scene load_steps=4 format=3 uid="uid://ts8qlbvwjy2r"]
 
 [ext_resource type="PackedScene" uid="uid://cml8ag50tpsmv" path="res://Scenes/main.tscn" id="1_ndwjx"]
-[ext_resource type="Texture2D" uid="uid://bjlusuvaaxb0" path="res://Sprites/pixel_door.png" id="2_tqt02"]
 [ext_resource type="Texture2D" uid="uid://dxihhccj250qo" path="res://Sprites/Chair.png" id="3_tqt02"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yipkt"]
@@ -9,17 +8,15 @@ size = Vector2(81.5, 135)
 
 [node name="Main" instance=ExtResource("1_ndwjx")]
 
-[node name="Sprite2D" type="Sprite2D" parent="." index="6"]
-position = Vector2(135.75, 260.75)
-scale = Vector2(0.374494, 0.74173)
-texture = ExtResource("2_tqt02")
+[node name="Door" parent="." index="4"]
+position = Vector2(1123, 497)
 
-[node name="TextureRect" parent="." index="8"]
-scale = Vector2(0.744, 0.493)
-stretch_mode = 3
+[node name="Door2" parent="." index="5"]
+position = Vector2(28, 497)
 
-[node name="Chair1" type="Node2D" parent="." index="10"]
-position = Vector2(1, 0)
+[node name="Chair1" type="StaticBody2D" parent="." index="9"]
+z_index = -170
+position = Vector2(-10, -5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair1" index="0"]
 position = Vector2(158, 603)
@@ -30,8 +27,9 @@ texture = ExtResource("3_tqt02")
 position = Vector2(152, 615)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair2" type="Node2D" parent="." index="11"]
-position = Vector2(0, -287)
+[node name="Chair2" type="StaticBody2D" parent="." index="10"]
+z_index = -170
+position = Vector2(-11, -292)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair2" index="0"]
 position = Vector2(158, 603)
@@ -42,8 +40,9 @@ texture = ExtResource("3_tqt02")
 position = Vector2(152, 615)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair3" type="Node2D" parent="." index="12"]
-position = Vector2(277, -290)
+[node name="Chair3" type="StaticBody2D" parent="." index="11"]
+z_index = -170
+position = Vector2(266, -295)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair3" index="0"]
 position = Vector2(158, 603)
@@ -54,8 +53,9 @@ texture = ExtResource("3_tqt02")
 position = Vector2(152, 615)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair4" type="Node2D" parent="." index="13"]
-position = Vector2(277, -1)
+[node name="Chair4" type="StaticBody2D" parent="." index="12"]
+z_index = -170
+position = Vector2(266, -6)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair4" index="0"]
 position = Vector2(158, 603)
@@ -66,8 +66,9 @@ texture = ExtResource("3_tqt02")
 position = Vector2(152, 615)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair5" type="Node2D" parent="." index="14"]
-position = Vector2(554, -290)
+[node name="Chair5" type="StaticBody2D" parent="." index="13"]
+z_index = -170
+position = Vector2(543, -295)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair5" index="0"]
 position = Vector2(158, 603)
@@ -78,8 +79,9 @@ texture = ExtResource("3_tqt02")
 position = Vector2(152, 615)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair6" type="StaticBody2D" parent="." index="15"]
-position = Vector2(554, 0)
+[node name="Chair6" type="StaticBody2D" parent="." index="14"]
+z_index = -170
+position = Vector2(543, -5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair6" index="0"]
 position = Vector2(158, 603)
@@ -90,8 +92,9 @@ texture = ExtResource("3_tqt02")
 position = Vector2(152, 615)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair7" type="Node2D" parent="." index="16"]
-position = Vector2(820, -290)
+[node name="Chair7" type="StaticBody2D" parent="." index="15"]
+z_index = -170
+position = Vector2(809, -295)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair7" index="0"]
 position = Vector2(158, 603)
@@ -102,8 +105,9 @@ texture = ExtResource("3_tqt02")
 position = Vector2(152, 615)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair8" type="Node2D" parent="." index="17"]
-position = Vector2(820, 0)
+[node name="Chair8" type="StaticBody2D" parent="." index="16"]
+z_index = -170
+position = Vector2(809, -5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair8" index="0"]
 position = Vector2(158, 603)
