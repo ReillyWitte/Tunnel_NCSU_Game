@@ -39,7 +39,8 @@ directories/dch_directory={
 "Spencer": "res://DialogStuff/Characters/Spencer.dch",
 "Susan": "res://DialogStuff/Characters/Susan.dch",
 "detective_crowford": "res://DialogStuff/Characters/detective_crowford.dch",
-"narrator": "res://DialogStuff/Characters/narrator.dch"
+"narrator": "res://DialogStuff/Characters/narrator.dch",
+"the_agency": "res://DialogStuff/Characters/the_agency.dch"
 }
 directories/dtl_directory={
 "alligator_timeline": "res://DialogStuff/alligator_timeline.dtl",
@@ -56,6 +57,7 @@ directories/dtl_directory={
 "otter_timeline": "res://DialogStuff/otter_timeline.dtl",
 "penguin_timeline": "res://DialogStuff/penguin_timeline.dtl",
 "rhino_timeline": "res://DialogStuff/rhino_timeline.dtl",
+"the_agency_timeline": "res://DialogStuff/the_agency_timeline.dtl",
 "timeline": "res://DialogStuff/timeline.dtl"
 }
 layout/style_directory={
@@ -73,12 +75,46 @@ layout/style_directory={
 "narrator": "res://DialogStuff/Characters/narrator.tres",
 "otter": "res://DialogStuff/Characters/otter.tres",
 "penguin": "res://DialogStuff/Characters/penguin.tres",
-"rhino": "res://DialogStuff/Characters/rhino.tres"
+"rhino": "res://DialogStuff/Characters/rhino.tres",
+"the_agency": "res://DialogStuff/Characters/the_agency.tres"
 }
-layout/style_list=["res://DialogStuff/Characters/custom_style.tres", "res://DialogStuff/Characters/eagle.tres", "res://DialogStuff/Characters/mole.tres", "res://DialogStuff/Characters/alligator.tres", "res://DialogStuff/Characters/frog.tres", "res://DialogStuff/Characters/penguin.tres", "res://DialogStuff/Characters/goat.tres", "res://DialogStuff/Characters/herring.tres", "res://DialogStuff/Characters/bat.tres", "res://DialogStuff/Characters/otter.tres", "res://DialogStuff/Characters/cow.tres", "res://DialogStuff/Characters/cat.tres", "res://DialogStuff/Characters/rhino.tres", "res://DialogStuff/Characters/narrator.tres"]
+layout/style_list=["res://DialogStuff/Characters/custom_style.tres", "res://DialogStuff/Characters/eagle.tres", "res://DialogStuff/Characters/mole.tres", "res://DialogStuff/Characters/alligator.tres", "res://DialogStuff/Characters/frog.tres", "res://DialogStuff/Characters/penguin.tres", "res://DialogStuff/Characters/goat.tres", "res://DialogStuff/Characters/herring.tres", "res://DialogStuff/Characters/bat.tres", "res://DialogStuff/Characters/otter.tres", "res://DialogStuff/Characters/cow.tres", "res://DialogStuff/Characters/cat.tres", "res://DialogStuff/Characters/rhino.tres", "res://DialogStuff/Characters/narrator.tres", "res://DialogStuff/Characters/the_agency.tres"]
 layout/default_style="res://DialogStuff/Characters/custom_style.tres"
 glossary/default_case_sensitive=true
 variables={}
+extensions_folder="res://addons/dialogic_additions"
+text/letter_speed=0.01
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/advance_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/join_default_wait=true
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/cross_fade_default_length=0.5
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={}
+audio/channel_defaults={
+"": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": false,
+"volume": 0.0
+},
+"music": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": true,
+"volume": 0.0
+}
+}
 
 [editor]
 
