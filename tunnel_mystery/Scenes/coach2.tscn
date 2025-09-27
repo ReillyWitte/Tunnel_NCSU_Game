@@ -6,12 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://bmu8wlits5ww7" path="res://addons/sudden_fade_plugin/demo/room2.tscn" id="6_atycd"]
 [ext_resource type="Script" uid="uid://bmshojjv0bi2r" path="res://Scenes/tunnel.gd" id="7_20q3q"]
 [ext_resource type="PackedScene" uid="uid://cfm2wcqna76q3" path="res://Scenes/NPCs/herring.tscn" id="7_atycd"]
+
 [ext_resource type="Texture2D" uid="uid://nrf0pf5p8mnm" path="res://Sprites/tunnelbackgrounddark.PNG" id="8_1e2j1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yipkt"]
 size = Vector2(81.5, 135)
 
-[node name="Main" instance=ExtResource("1_p2scx")]
+xtResource("1_p2scx")]
 
 [node name="Door" parent="." index="4"]
 next_side = 1
@@ -125,6 +126,7 @@ scale = Vector2(0.7, 0.7)
 shape = SubResource("RectangleShape2D_yipkt")
 
 [node name="FadeTransitionManager" type="ColorRect" parent="." index="17"]
+
 offset_right = 40.0
 offset_bottom = 40.0
 color = Color(0, 0, 0, 1)
@@ -132,7 +134,9 @@ script = ExtResource("5_xiufw")
 next_scene = ExtResource("6_atycd")
 metadata/_custom_type_script = "uid://c6215vuol8ms2"
 
+
 [node name="tunnel" type="ParallaxBackground" parent="." index="18"]
+
 script = ExtResource("7_20q3q")
 scroll_speed = Vector2(-500, 0)
 
@@ -146,7 +150,9 @@ texture_repeat = 2
 position = Vector2(561, 356)
 texture = ExtResource("8_1e2j1")
 
+
 [node name="Herring" parent="." index="19" instance=ExtResource("7_atycd")]
 z_index = -100
 position = Vector2(87, -45)
 timeline = "herring_timeline"
+

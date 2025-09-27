@@ -1,9 +1,11 @@
+
 [gd_scene load_steps=13 format=3 uid="uid://ts8qlbvwjy2r"]
 
 [ext_resource type="PackedScene" uid="uid://cml8ag50tpsmv" path="res://Scenes/main.tscn" id="1_ndwjx"]
 [ext_resource type="Texture2D" uid="uid://dxihhccj250qo" path="res://Sprites/Chair.png" id="3_tqt02"]
 [ext_resource type="PackedScene" uid="uid://ch8b8vbedujkh" path="res://Scenes/NPCs/alligator.tscn" id="4_2lnuo"]
 [ext_resource type="PackedScene" uid="uid://c0jn688lpdb4b" path="res://Scenes/NPCs/goat.tscn" id="5_2lnuo"]
+
 [ext_resource type="PackedScene" uid="uid://bmu8wlits5ww7" path="res://addons/sudden_fade_plugin/demo/room2.tscn" id="7_snxeu"]
 [ext_resource type="Script" uid="uid://c6215vuol8ms2" path="res://addons/sudden_fade_plugin/fade_transition_manager.gd" id="7_xo6ao"]
 [ext_resource type="Texture2D" uid="uid://b070q1gfaxhg2" path="res://Sprites/tunnelbackground.png" id="8_snxeu"]
@@ -29,6 +31,7 @@ script = ExtResource("7_xo6ao")
 metadata/_custom_type_script = "uid://c6215vuol8ms2"
 
 [node name="Door" parent="." index="5"]
+
 position = Vector2(1104, 463)
 next_car = ""
 
@@ -42,6 +45,7 @@ position = Vector2(-452, -37)
 timeline = "alligator_timeline"
 
 [node name="Chair1" type="StaticBody2D" parent="." index="11"]
+
 position = Vector2(-10, -5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair1" index="0"]
@@ -55,6 +59,7 @@ scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_yipkt")
 
 [node name="Chair2" type="StaticBody2D" parent="." index="12"]
+
 z_index = -170
 position = Vector2(-11, -292)
 
@@ -69,6 +74,7 @@ scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_yipkt")
 
 [node name="Chair3" type="StaticBody2D" parent="." index="13"]
+
 z_index = -170
 position = Vector2(266, -295)
 
@@ -83,6 +89,7 @@ scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_yipkt")
 
 [node name="Chair4" type="StaticBody2D" parent="." index="14"]
+
 position = Vector2(266, -6)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair4" index="0"]
@@ -96,6 +103,7 @@ scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_yipkt")
 
 [node name="Chair5" type="StaticBody2D" parent="." index="15"]
+
 z_index = -170
 position = Vector2(543, -295)
 
@@ -110,6 +118,7 @@ scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_yipkt")
 
 [node name="Chair6" type="StaticBody2D" parent="." index="16"]
+
 position = Vector2(543, -5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair6" index="0"]
@@ -137,6 +146,7 @@ scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_yipkt")
 
 [node name="Chair8" type="StaticBody2D" parent="." index="18"]
+
 position = Vector2(809, -5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair8" index="0"]
@@ -177,5 +187,7 @@ motion_mirroring = Vector2(1000, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="tunnel/ParallaxLayer" index="0"]
 texture_repeat = 2
+
 position = Vector2(553, 366)
+
 texture = ExtResource("9_2lnuo")
