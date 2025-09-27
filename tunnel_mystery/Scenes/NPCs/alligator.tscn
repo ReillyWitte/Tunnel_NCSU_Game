@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ch8b8vbedujkh"]
 
 [ext_resource type="PackedScene" uid="uid://c6qnesbh3nh6u" path="res://Scenes/interactable.tscn" id="1_ee8ri"]
-[ext_resource type="Texture2D" uid="uid://bmkbl3e1gpii2" path="res://Sprites/Gator.png" id="2_lsplh"]
+[ext_resource type="Texture2D" uid="uid://3im7aq0s8ywk" path="res://Sprites/GatorRevised.png" id="2_lsplh"]
 
 [node name="Interactable" instance=ExtResource("1_ee8ri")]
 

@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://c3kqca37q6ptr" path="res://Scenes/interactable.gd" id="1_pmsje"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pmsje"]
-size = Vector2(120, 120)
+size = Vector2(120, 48)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8s6bd"]
 radius = 100.08

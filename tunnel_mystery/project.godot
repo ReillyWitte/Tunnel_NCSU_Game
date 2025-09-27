@@ -29,7 +29,7 @@ directories/dch_directory={
 "Earnest": "res://DialogStuff/Characters/Earnest.dch",
 "Esmeralda": "res://DialogStuff/Characters/Esmeralda.dch",
 "Gunther": "res://DialogStuff/Characters/Gunther.dch",
-"Halley": "res://DialogStuff/Characters/Halley.dch",
+"Herrington": "res://DialogStuff/Characters/Herrington.dch",
 "Jerry": "res://DialogStuff/Characters/Jerry.dch",
 "Meredith": "res://DialogStuff/Characters/Meredith.dch",
 "Oswald": "res://DialogStuff/Characters/Oswald.dch",
@@ -38,7 +38,8 @@ directories/dch_directory={
 "Sir_Reginald_Atwood": "res://DialogStuff/Characters/Sir_Reginald_Atwood.dch",
 "Spencer": "res://DialogStuff/Characters/Spencer.dch",
 "Susan": "res://DialogStuff/Characters/Susan.dch",
-"detective_crowford": "res://DialogStuff/Characters/detective_crowford.dch"
+"detective_crowford": "res://DialogStuff/Characters/detective_crowford.dch",
+"narrator": "res://DialogStuff/Characters/narrator.dch"
 }
 directories/dtl_directory={
 "alligator_timeline": "res://DialogStuff/alligator_timeline.dtl",
@@ -69,11 +70,12 @@ layout/style_directory={
 "herring": "res://DialogStuff/Characters/herring.tres",
 "lion": "res://DialogStuff/Characters/custom_style.tres",
 "mole": "res://DialogStuff/Characters/mole.tres",
+"narrator": "res://DialogStuff/Characters/narrator.tres",
 "otter": "res://DialogStuff/Characters/otter.tres",
 "penguin": "res://DialogStuff/Characters/penguin.tres",
 "rhino": "res://DialogStuff/Characters/rhino.tres"
 }
-layout/style_list=["res://DialogStuff/Characters/custom_style.tres", "res://DialogStuff/Characters/eagle.tres", "res://DialogStuff/Characters/mole.tres", "res://DialogStuff/Characters/alligator.tres", "res://DialogStuff/Characters/frog.tres", "res://DialogStuff/Characters/penguin.tres", "res://DialogStuff/Characters/goat.tres", "res://DialogStuff/Characters/herring.tres", "res://DialogStuff/Characters/bat.tres", "res://DialogStuff/Characters/otter.tres", "res://DialogStuff/Characters/cow.tres", "res://DialogStuff/Characters/cat.tres", "res://DialogStuff/Characters/rhino.tres"]
+layout/style_list=["res://DialogStuff/Characters/custom_style.tres", "res://DialogStuff/Characters/eagle.tres", "res://DialogStuff/Characters/mole.tres", "res://DialogStuff/Characters/alligator.tres", "res://DialogStuff/Characters/frog.tres", "res://DialogStuff/Characters/penguin.tres", "res://DialogStuff/Characters/goat.tres", "res://DialogStuff/Characters/herring.tres", "res://DialogStuff/Characters/bat.tres", "res://DialogStuff/Characters/otter.tres", "res://DialogStuff/Characters/cow.tres", "res://DialogStuff/Characters/cat.tres", "res://DialogStuff/Characters/rhino.tres", "res://DialogStuff/Characters/narrator.tres"]
 layout/default_style="res://DialogStuff/Characters/custom_style.tres"
 glossary/default_case_sensitive=true
 variables={}

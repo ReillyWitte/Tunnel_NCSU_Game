@@ -1,0 +1,12 @@
+if Globals.goat_dialog == 0.0:
+	Esmeralda: Hey hey hey!!! Oh boy do I have a deal for you.
+	Esmeralda: I sell the most pristine coinage in the area. Top notch, grade A, doubloons.
+	Esmeralda: Would you be interested in buying?
+	- No thank you. Have you seen any suspicious behavior lately?
+		Esmeralda: [i]Humph[/i].
+		Esmeralda: No sir I have not.
+	- Sure I'll buy one.
+		Esmeralda: Yes! You won't regret it.
+		narrator: You hand her a dollar, and she gives you a rusty old coin. It doesn't seem worth much.
+		[style]
+		Esmeralda: Have a good one mister!

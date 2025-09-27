@@ -1,0 +1,12 @@
+if Globals.herring_dialog == 0.0:
+	Herrington: Man, being on this train makes me feel like a fish out of water. I yearn for the sea.
+	Herrington: What can I do for you mister?
+	- I'm conducting an investigation. You see anything fishy going on?
+		Herrington: ............
+		[wait time="1.0"]
+		Herrington: That wasn't funny.
+		Herrington: But I did see something weird.
+		Herrington: Before the cat went to her sleeping quarters, she tried to take a bite out of me!
+		Herrington: I slapped some sense into her, but gosh she's a weirdo.
+	- Nothing. Sorry to bother you.
+		Herrington: Alright. Have a good day!
