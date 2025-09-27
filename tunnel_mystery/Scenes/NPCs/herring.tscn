@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwwqgpjokxr3n"]
+
+[ext_resource type="PackedScene" uid="uid://c6qnesbh3nh6u" path="res://Scenes/interactable.tscn" id="1_mcov0"]
+[ext_resource type="Texture2D" uid="uid://3wsdbnopkl7n" path="res://Sprites/red herring.png" id="2_idlsv"]
+
+[node name="Interactable" instance=ExtResource("1_mcov0")]
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_idlsv")

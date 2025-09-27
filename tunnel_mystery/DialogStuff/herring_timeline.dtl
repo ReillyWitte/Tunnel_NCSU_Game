@@ -1,0 +1,12 @@
+if Globals.herring_dialog == 0.0:
+	Halley: Man, being on this train makes me feel like a fish out of water. I yearn for the sea.
+	Halley: What can I do for you mister?
+	- I'm conducting an investigation. You see anything fishy going on?
+		Halley: ............
+		[wait time="1.0"]
+		Halley: That wasn't funny.
+		Halley: But I did see something weird.
+		Halley: Before the cat went to her sleeping quarters, she tried to take a bite out of me!
+		Halley: I slapped some sense into her, but gosh she's a weirdo.
+	- Nothing. Sorry to bother you.
+		Halley: Alright. Have a good day!

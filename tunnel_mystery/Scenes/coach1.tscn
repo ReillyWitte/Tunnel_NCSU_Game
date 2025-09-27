@@ -35,7 +35,11 @@ next_car = ""
 next_car = "res://Scenes/coach2.tscn"
 next_side = 2
 
-[node name="Chair1" type="StaticBody2D" parent="." index="10"]
+[node name="Alligator" parent="." index="7" instance=ExtResource("4_2lnuo")]
+position = Vector2(-452, -37)
+timeline = "alligator_timeline"
+
+[node name="Chair1" type="StaticBody2D" parent="." index="11"]
 position = Vector2(-10, -5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair1" index="0"]
@@ -48,7 +52,7 @@ position = Vector2(152, 615)
 scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair2" type="StaticBody2D" parent="." index="11"]
+[node name="Chair2" type="StaticBody2D" parent="." index="12"]
 z_index = -170
 position = Vector2(-11, -292)
 
@@ -62,7 +66,7 @@ position = Vector2(152, 615)
 scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair3" type="StaticBody2D" parent="." index="12"]
+[node name="Chair3" type="StaticBody2D" parent="." index="13"]
 z_index = -170
 position = Vector2(266, -295)
 
@@ -76,7 +80,7 @@ position = Vector2(152, 615)
 scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair4" type="StaticBody2D" parent="." index="13"]
+[node name="Chair4" type="StaticBody2D" parent="." index="14"]
 position = Vector2(266, -6)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair4" index="0"]
@@ -89,7 +93,7 @@ position = Vector2(152, 615)
 scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair5" type="StaticBody2D" parent="." index="14"]
+[node name="Chair5" type="StaticBody2D" parent="." index="15"]
 z_index = -170
 position = Vector2(543, -295)
 
@@ -103,7 +107,7 @@ position = Vector2(152, 615)
 scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair6" type="StaticBody2D" parent="." index="15"]
+[node name="Chair6" type="StaticBody2D" parent="." index="16"]
 position = Vector2(543, -5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair6" index="0"]
@@ -116,7 +120,7 @@ position = Vector2(152, 615)
 scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair7" type="StaticBody2D" parent="." index="16"]
+[node name="Chair7" type="StaticBody2D" parent="." index="17"]
 z_index = -170
 position = Vector2(809, -295)
 
@@ -130,7 +134,7 @@ position = Vector2(152, 615)
 scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair8" type="StaticBody2D" parent="." index="17"]
+[node name="Chair8" type="StaticBody2D" parent="." index="18"]
 position = Vector2(809, -5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair8" index="0"]
@@ -142,10 +146,6 @@ texture = ExtResource("3_tqt02")
 position = Vector2(152, 615)
 scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_yipkt")
-
-[node name="Alligator" parent="." index="18" instance=ExtResource("4_2lnuo")]
-position = Vector2(-465, -44)
-timeline = "alligator_timeline"
 
 [node name="Goat" parent="." index="19" instance=ExtResource("5_2lnuo")]
 position = Vector2(82, 243)
