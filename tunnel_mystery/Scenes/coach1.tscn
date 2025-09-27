@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ts8qlbvwjy2r"]
+[gd_scene load_steps=16 format=3 uid="uid://ts8qlbvwjy2r"]
 
 [ext_resource type="PackedScene" uid="uid://cml8ag50tpsmv" path="res://Scenes/main.tscn" id="1_ndwjx"]
 [ext_resource type="Script" uid="uid://dxa4gdu2rtvkd" path="res://interactable.gd" id="3_iidp6"]
@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://crmfx3hill35p" path="res://Sprites/Goat.png" id="5_2h7bt"]
 [ext_resource type="PackedScene" uid="uid://bmu8wlits5ww7" path="res://addons/sudden_fade_plugin/demo/room2.tscn" id="7_snxeu"]
 [ext_resource type="Script" uid="uid://c6215vuol8ms2" path="res://addons/sudden_fade_plugin/fade_transition_manager.gd" id="7_xo6ao"]
+[ext_resource type="Texture2D" uid="uid://b070q1gfaxhg2" path="res://Sprites/tunnelbackground.png" id="8_snxeu"]
+[ext_resource type="Texture2D" uid="uid://nrf0pf5p8mnm" path="res://Sprites/tunnelbackgrounddark.PNG" id="9_2lnuo"]
+[ext_resource type="Script" uid="uid://bmshojjv0bi2r" path="res://Scenes/tunnel.gd" id="10_w40gk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yipkt"]
 size = Vector2(81.5, 135)
@@ -16,6 +19,13 @@ size = Vector2(113.864, 138.864)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4rpl3"]
 size = Vector2(97.4659, 80)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2lnuo"]
+texture = ExtResource("8_snxeu")
+
+[sub_resource type="TileSet" id="TileSet_w40gk"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_2lnuo")
 
 [node name="Main" instance=ExtResource("1_ndwjx")]
 
@@ -180,3 +190,22 @@ color = Color(0, 0, 0, 1)
 script = ExtResource("7_xo6ao")
 next_scene = ExtResource("7_snxeu")
 metadata/_custom_type_script = "uid://c6215vuol8ms2"
+
+[node name="TileMap" type="TileMap" parent="." index="21"]
+position = Vector2(156, 138)
+tile_set = SubResource("TileSet_w40gk")
+format = 2
+
+[node name="tunnel" type="ParallaxBackground" parent="." index="22"]
+script = ExtResource("10_w40gk")
+scroll_speed = Vector2(-500, 0)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="tunnel" index="0"]
+texture_repeat = 2
+motion_scale = Vector2(2, 2)
+motion_mirroring = Vector2(1000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="tunnel/ParallaxLayer" index="0"]
+texture_repeat = 2
+position = Vector2(561, 356)
+texture = ExtResource("9_2lnuo")
