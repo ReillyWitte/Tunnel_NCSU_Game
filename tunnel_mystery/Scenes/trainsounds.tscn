@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwnxy7q1bm0xa"]
+
+[ext_resource type="AudioStream" uid="uid://kty1lps8tp31" path="res://Audio Files/trainsounds.mp3" id="1_npo4t"]
+
+[node name="Trainsounds" type="Node2D"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_npo4t")
+autoplay = true

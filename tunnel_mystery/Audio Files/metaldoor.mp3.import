@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d23vyu0vdblfw"
+path="res://.godot/imported/metaldoor.mp3-ecc9c127c19c3cf15b0686367a04b974.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/metaldoor.mp3"
+dest_files=["res://.godot/imported/metaldoor.mp3-ecc9c127c19c3cf15b0686367a04b974.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

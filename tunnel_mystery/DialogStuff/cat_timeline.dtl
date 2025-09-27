@@ -1,0 +1,4 @@
+if Globals.cat_dialog == 0.0:
+	Susan: [i]Zzzzzzzz.....[/i]
+	Susan: [i]Zzzzzzzzzzzzzzzzzzz....[/i]
+	narrator: She seems to be deep asleep.

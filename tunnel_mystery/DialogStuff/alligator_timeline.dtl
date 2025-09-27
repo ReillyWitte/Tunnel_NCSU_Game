@@ -1,0 +1,8 @@
+if Globals.alligator_dialog == 0.0:
+	Jerry: Nice lookin' pipe. Very distinguished.
+	Jerry: What's up?
+	- I'm in the middle of an investigation. You see anything sketchy?
+		Jerry: I totally think Gunther is cheating at cards. Look at how much he's sweating!
+		Jerry: But other than that no. Good luck with your biz.
+	- Nothing. Just passing through.
+		Jerry: Well okay then. Nice to meet you too.

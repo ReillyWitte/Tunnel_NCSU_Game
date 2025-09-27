@@ -80,7 +80,7 @@ offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0, 0, 0, 0.231373)
+color = Color(0, 0, 0, 0.23137255)
 
 [node name="DialogicNode_PortraitContainer" type="Control" parent="Anchor/Panel/HBox/PortraitPanel/PortraitBackgroundColor"]
 layout_mode = 1

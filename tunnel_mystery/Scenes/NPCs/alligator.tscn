@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ch8b8vbedujkh"]
+
+[ext_resource type="PackedScene" uid="uid://c6qnesbh3nh6u" path="res://Scenes/interactable.tscn" id="1_ee8ri"]
+[ext_resource type="Texture2D" uid="uid://3im7aq0s8ywk" path="res://Sprites/GatorRevised.png" id="2_lsplh"]
+
+[node name="Interactable" instance=ExtResource("1_ee8ri")]
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_lsplh")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(621.25, 307)

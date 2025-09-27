@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://jdgmgd2i5rws"]
 
 [ext_resource type="Script" uid="uid://bfoe3y83as26e" path="res://Scenes/door.gd" id="1_p0e35"]
-[ext_resource type="Texture2D" uid="uid://bjlusuvaaxb0" path="res://Sprites/pixel_door.png" id="1_w6aom"]
+[ext_resource type="Texture2D" uid="uid://w8ampa8ycves" path="res://Sprites/Rename.png" id="2_p0e35"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p0e35"]
 size = Vector2(91, 288)
@@ -13,13 +13,12 @@ radius = 97.0206
 script = ExtResource("1_p0e35")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(10.5, -122)
+position = Vector2(1, -11)
 shape = SubResource("RectangleShape2D_p0e35")
 
 [node name="DoorSprite" type="Sprite2D" parent="."]
-position = Vector2(11, -123)
-scale = Vector2(0.390688, 0.755089)
-texture = ExtResource("1_w6aom")
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_p0e35")
 
 [node name="InteractZone" type="Area2D" parent="."]
 

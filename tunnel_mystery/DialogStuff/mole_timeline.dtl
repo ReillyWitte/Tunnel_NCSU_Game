@@ -1,0 +1,8 @@
+if Globals.mole_dialog == 0.0:
+	Earnest: Well howdy detective!
+	Earnest: Anything I can help you with on this wonderful day?
+	- I'm investigating a case. Have you seen anything suspicious?
+		Earnest: Oh bother! I haven't seen any shenanigans afoot. I've been in here shoveling coal all day!
+		Earnest: I hope you find what you're looking for.
+	- No, thank you.
+		Earnest: Well I wish you well! I need to get back to work.

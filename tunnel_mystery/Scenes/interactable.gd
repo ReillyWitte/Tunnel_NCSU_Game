@@ -1,6 +1,7 @@
 extends StaticBody2D
 
 var entered = 0
+@export var timeline = ""
 
 func _ready():
 	$Area2D.body_entered.connect(_on_area_2d_body_entered)
@@ -23,4 +24,4 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 func _process(_delta):
 	if entered == 1 and Input.is_action_just_pressed("ui_accept"):
 		if Dialogic.current_timeline == null:
-			Dialogic.start("timeline")
+			Dialogic.start(timeline)
