@@ -1,0 +1,2 @@
+if Globals.frog_dialog == 0.0:
+	Gunther: Why salutations! What can I do for you?

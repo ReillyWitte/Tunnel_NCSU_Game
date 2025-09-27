@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Tunnel_Mystery"
 run/main_scene="uid://cml8ag50tpsmv"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -23,12 +23,59 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"detective_crowford": "res://DialogStuff/detective_crowford.dch"
+"Angelina": "res://DialogStuff/Characters/Angelina.dch",
+"Dr_Ehr_Budd": "res://DialogStuff/Characters/Dr_Ehr_Budd.dch",
+"Earnest": "res://DialogStuff/Characters/Earnest.dch",
+"Esmeralda": "res://DialogStuff/Characters/Esmeralda.dch",
+"Gunther": "res://DialogStuff/Characters/Gunther.dch",
+"Halley": "res://DialogStuff/Characters/Halley.dch",
+"Jerry": "res://DialogStuff/Characters/Jerry.dch",
+"Meredith": "res://DialogStuff/Characters/Meredith.dch",
+"Oswald": "res://DialogStuff/Characters/Oswald.dch",
+"Ricky": "res://DialogStuff/Characters/Ricky.dch",
+"Senator_Freedom": "res://DialogStuff/Characters/Senator_Freedom.dch",
+"Sir_Reginald_Atwood": "res://DialogStuff/Characters/Sir_Reginald_Atwood.dch",
+"Spencer": "res://DialogStuff/Characters/Spencer.dch",
+"Susan": "res://DialogStuff/Characters/Susan.dch",
+"detective_crowford": "res://DialogStuff/Characters/detective_crowford.dch"
 }
 directories/dtl_directory={
+"alligator_timeline": "res://DialogStuff/alligator_timeline.dtl",
+"bat_timeline": "res://DialogStuff/bat_timeline.dtl",
+"cat_timeline": "res://DialogStuff/cat_timeline.dtl",
+"cow_timeline": "res://DialogStuff/cow_timeline.dtl",
+"dog_timeline": "res://DialogStuff/dog_timeline.dtl",
+"eagle_timeline": "res://DialogStuff/eagle_timeline.dtl",
+"frog_timeline": "res://DialogStuff/frog_timeline.dtl",
+"goat_timeline": "res://DialogStuff/goat_timeline.dtl",
+"herring_timeline": "res://DialogStuff/herring_timeline.dtl",
+"lion_timeline": "res://DialogStuff/lion_timeline.dtl",
+"mole_timeline": "res://DialogStuff/mole_timeline.dtl",
+"otter_timeline": "res://DialogStuff/otter_timeline.dtl",
+"penguin_timeline": "res://DialogStuff/penguin_timeline.dtl",
+"rhino_timeline": "res://DialogStuff/rhino_timeline.dtl",
 "timeline": "res://DialogStuff/timeline.dtl"
 }
-layout/style_directory={}
+layout/style_directory={
+"": "res://DialogStuff/Characters/custom_style.tres",
+"alligator": "res://DialogStuff/Characters/alligator.tres",
+"bat": "res://DialogStuff/Characters/bat.tres",
+"cat": "res://DialogStuff/Characters/cat.tres",
+"cow": "res://DialogStuff/Characters/cow.tres",
+"eagle": "res://DialogStuff/Characters/eagle.tres",
+"frog": "res://DialogStuff/Characters/frog.tres",
+"goat": "res://DialogStuff/Characters/goat.tres",
+"herring": "res://DialogStuff/Characters/herring.tres",
+"lion": "res://DialogStuff/Characters/custom_style.tres",
+"mole": "res://DialogStuff/Characters/mole.tres",
+"otter": "res://DialogStuff/Characters/otter.tres",
+"penguin": "res://DialogStuff/Characters/penguin.tres",
+"rhino": "res://DialogStuff/Characters/rhino.tres"
+}
+layout/style_list=["res://DialogStuff/Characters/custom_style.tres", "res://DialogStuff/Characters/eagle.tres", "res://DialogStuff/Characters/mole.tres", "res://DialogStuff/Characters/alligator.tres", "res://DialogStuff/Characters/frog.tres", "res://DialogStuff/Characters/penguin.tres", "res://DialogStuff/Characters/goat.tres", "res://DialogStuff/Characters/herring.tres", "res://DialogStuff/Characters/bat.tres", "res://DialogStuff/Characters/otter.tres", "res://DialogStuff/Characters/cow.tres", "res://DialogStuff/Characters/cat.tres", "res://DialogStuff/Characters/rhino.tres"]
+layout/default_style="res://DialogStuff/Characters/custom_style.tres"
+glossary/default_case_sensitive=true
+variables={}
 
 [editor_plugins]
 

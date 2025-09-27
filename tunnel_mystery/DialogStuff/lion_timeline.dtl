@@ -1,0 +1,6 @@
+if Globals.lion_dialog == 0.0:
+	Sir_Reginald_Atwood: Well hello detective! Is something the matter?
+	- Yes
+		Sir_Reginald_Atwood: I can help.
+	- No
+		Sir_Reginald_Atwood: Ok, let me know if you need anything.

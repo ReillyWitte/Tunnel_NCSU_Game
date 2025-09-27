@@ -1,0 +1,5 @@
+if Globals.eagle_dialog == 0.0:
+	Senator_Freedom: Pardon me sir, I'm busy.
+	set {Globals.eagle_dialog} = 1.0
+elif Globals.eagle_dialog == 1.0:
+	Senator_Freedom: Sorry, I'm not taking any interviews.

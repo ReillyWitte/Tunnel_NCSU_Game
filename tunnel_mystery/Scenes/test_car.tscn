@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://ts8qlbvwjy2r"]
+[gd_scene load_steps=6 format=3 uid="uid://ts8qlbvwjy2r"]
 
 [ext_resource type="PackedScene" uid="uid://cml8ag50tpsmv" path="res://Scenes/main.tscn" id="1_ndwjx"]
 [ext_resource type="Texture2D" uid="uid://bjlusuvaaxb0" path="res://Sprites/pixel_door.png" id="2_tqt02"]
 [ext_resource type="Texture2D" uid="uid://dxihhccj250qo" path="res://Sprites/Chair.png" id="3_tqt02"]
+[ext_resource type="PackedScene" uid="uid://c6qnesbh3nh6u" path="res://Scenes/interactable.tscn" id="3_yipkt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yipkt"]
 size = Vector2(81.5, 135)
@@ -14,11 +15,14 @@ position = Vector2(135.75, 260.75)
 scale = Vector2(0.374494, 0.74173)
 texture = ExtResource("2_tqt02")
 
-[node name="TextureRect" parent="." index="8"]
+[node name="Interactable" parent="." index="7" instance=ExtResource("3_yipkt")]
+position = Vector2(-74, -53)
+
+[node name="TextureRect" parent="." index="9"]
 scale = Vector2(0.744, 0.493)
 stretch_mode = 3
 
-[node name="Chair1" type="Node2D" parent="." index="10"]
+[node name="Chair1" type="Node2D" parent="." index="11"]
 position = Vector2(1, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair1" index="0"]
@@ -30,7 +34,7 @@ texture = ExtResource("3_tqt02")
 position = Vector2(152, 615)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair2" type="Node2D" parent="." index="11"]
+[node name="Chair2" type="Node2D" parent="." index="12"]
 position = Vector2(0, -287)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair2" index="0"]
@@ -42,7 +46,7 @@ texture = ExtResource("3_tqt02")
 position = Vector2(152, 615)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair3" type="Node2D" parent="." index="12"]
+[node name="Chair3" type="Node2D" parent="." index="13"]
 position = Vector2(277, -290)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair3" index="0"]
@@ -54,7 +58,7 @@ texture = ExtResource("3_tqt02")
 position = Vector2(152, 615)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair4" type="Node2D" parent="." index="13"]
+[node name="Chair4" type="Node2D" parent="." index="14"]
 position = Vector2(277, -1)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair4" index="0"]
@@ -66,7 +70,7 @@ texture = ExtResource("3_tqt02")
 position = Vector2(152, 615)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair5" type="Node2D" parent="." index="14"]
+[node name="Chair5" type="Node2D" parent="." index="15"]
 position = Vector2(554, -290)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair5" index="0"]
@@ -78,7 +82,7 @@ texture = ExtResource("3_tqt02")
 position = Vector2(152, 615)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair6" type="StaticBody2D" parent="." index="15"]
+[node name="Chair6" type="StaticBody2D" parent="." index="16"]
 position = Vector2(554, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair6" index="0"]
@@ -90,7 +94,7 @@ texture = ExtResource("3_tqt02")
 position = Vector2(152, 615)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair7" type="Node2D" parent="." index="16"]
+[node name="Chair7" type="Node2D" parent="." index="17"]
 position = Vector2(820, -290)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair7" index="0"]
@@ -102,7 +106,7 @@ texture = ExtResource("3_tqt02")
 position = Vector2(152, 615)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair8" type="Node2D" parent="." index="17"]
+[node name="Chair8" type="Node2D" parent="." index="18"]
 position = Vector2(820, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair8" index="0"]
