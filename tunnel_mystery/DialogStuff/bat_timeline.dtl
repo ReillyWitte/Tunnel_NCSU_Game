@@ -1,0 +1,10 @@
+if Globals.bat_dialog == 0.0:
+	Angelina: [i]Zzzzzzzz.....[/i]
+	Angelina: [i]Zzzzzzzzzzzzzzzzzzz....[/i]
+	narrator: Do you wish to wake the bat?
+	- Yes, they may have information.
+		set {Globals.bat_wake} = "1.0"
+		Angelina: [i]SCREEEEEEEECHHHH[/i]
+		Angelina: [i]SCREEEEEEEEEEEEEEEEEEEEEEEEEECHHHHH[/i]
+		narrator: That was a bad idea.
+	- No, they should sleep.

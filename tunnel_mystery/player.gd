@@ -4,10 +4,12 @@ extends CharacterBody2D
 
 
 var animated_sprite: AnimatedSprite2D  # reference to the sprite
+var shadow: Sprite2D
 
 func _ready():
 	# Get AnimatedSprite2D
 	animated_sprite = $AnimatedSprite2D
+	shadow = $Sprite2D
 	
 	if Globals.door_side == Globals.LEFT:
 		position = Vector2(110,400)
@@ -29,9 +31,12 @@ func get_input():
 		if Dialogic.current_timeline == null:
 			if input_direction.x < 0:
 				animated_sprite.flip_h = true
+				shadow.flip_h = true
+				
 			elif input_direction.x > 0:
 				animated_sprite.flip_h = false
-
+				shadow.flip_h = false
+				
 func _physics_process(_delta):
 	if Dialogic.current_timeline == null:
 		get_input()

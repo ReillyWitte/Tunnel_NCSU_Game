@@ -1,0 +1,7 @@
+if Globals.penguin_dialog == 0.0:
+	Spencer: Hey man. You want a drink?
+	- No, but I do want information. You see anything suspicious recently?
+		Spencer: Suspicious? I wouldn't say that. It's been a little slow today though, usually the front of the train buys more drinks.
+		Spencer: Good luck with your investigation detective.
+	- No,  just passing through.
+		Spencer: Alright. Enjoy your ride sir.

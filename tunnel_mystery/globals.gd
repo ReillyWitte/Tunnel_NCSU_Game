@@ -31,3 +31,4 @@ var lockpick = 1
 
 # Other Flags
 var game_start = 0
+var bat_wake = 0

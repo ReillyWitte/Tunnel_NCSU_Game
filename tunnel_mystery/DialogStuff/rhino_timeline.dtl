@@ -1,0 +1,8 @@
+if Globals.rhino_dialog == 0.0:
+	Ricky: Hey bub. Let me see your ticket.
+	narrator: You hand him your ticket, and he shakes his head disapprovingly.
+	Ricky: That right there is a coach ticket. I can only let you into first class if you have a [color=blue]blue[/color] ticket.
+	Ricky: Sorry.
+	set {Globals.rhino_dialog} = 1.0
+if Globals.rhino_dialog == 1.0:
+	Ricky: Sorry bub. I still need that  [color=blue]blue[/color] ticket.
