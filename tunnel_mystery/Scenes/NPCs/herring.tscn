@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfm2wcqna76q3"]
+
+[ext_resource type="Script" uid="uid://c3kqca37q6ptr" path="res://Scenes/interactable.gd" id="1_m0ttr"]
+[ext_resource type="Texture2D" uid="uid://3wsdbnopkl7n" path="res://Sprites/red herring.png" id="2_mcov0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmsje"]
+size = Vector2(69, 169)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8s6bd"]
+radius = 100.08
+
+[node name="Interactable" type="StaticBody2D"]
+script = ExtResource("1_m0ttr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(635, 307)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_mcov0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(656.5, 311.5)
+shape = SubResource("RectangleShape2D_pmsje")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(634, 311)
+shape = SubResource("CircleShape2D_8s6bd")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

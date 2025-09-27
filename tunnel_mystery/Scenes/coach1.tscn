@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bfn7xud7mt7bl"]
+[gd_scene load_steps=13 format=3 uid="uid://ts8qlbvwjy2r"]
 
 [ext_resource type="PackedScene" uid="uid://cml8ag50tpsmv" path="res://Scenes/main.tscn" id="1_ndwjx"]
 [ext_resource type="Texture2D" uid="uid://dxihhccj250qo" path="res://Sprites/Chair.png" id="3_tqt02"]
@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://c6215vuol8ms2" path="res://addons/sudden_fade_plugin/fade_transition_manager.gd" id="7_xo6ao"]
 [ext_resource type="Texture2D" uid="uid://b070q1gfaxhg2" path="res://Sprites/tunnelbackground.png" id="8_snxeu"]
 [ext_resource type="Texture2D" uid="uid://nrf0pf5p8mnm" path="res://Sprites/tunnelbackgrounddark.PNG" id="9_2lnuo"]
-[ext_resource type="Script" path="res://Scenes/tunnel.gd" id="10_w40gk"]
+[ext_resource type="Script" uid="uid://bmshojjv0bi2r" path="res://Scenes/tunnel.gd" id="10_w40gk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yipkt"]
 size = Vector2(81.5, 135)
@@ -29,9 +29,11 @@ script = ExtResource("7_xo6ao")
 metadata/_custom_type_script = "uid://c6215vuol8ms2"
 
 [node name="Door" parent="." index="5"]
+position = Vector2(1104, 463)
 next_car = ""
 
 [node name="Door2" parent="." index="6"]
+position = Vector2(47, 463)
 next_car = "res://Scenes/coach2.tscn"
 next_side = 2
 
@@ -148,7 +150,7 @@ position = Vector2(-465, -44)
 timeline = "alligator_timeline"
 
 [node name="Goat" parent="." index="19" instance=ExtResource("5_2lnuo")]
-position = Vector2(82, 243)
+position = Vector2(82, 266)
 timeline = "goat_timeline"
 
 [node name="FadeTransitionManager" type="ColorRect" parent="." index="20"]
@@ -175,5 +177,5 @@ motion_mirroring = Vector2(1000, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="tunnel/ParallaxLayer" index="0"]
 texture_repeat = 2
-position = Vector2(561, 356)
+position = Vector2(553, 366)
 texture = ExtResource("9_2lnuo")

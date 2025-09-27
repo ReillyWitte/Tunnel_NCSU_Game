@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://kty1lps8tp31"
+path="res://.godot/imported/trainsounds.mp3-f33ea430f076e032c5a1dc72a627a5a0.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/trainsounds.mp3"
+dest_files=["res://.godot/imported/trainsounds.mp3-f33ea430f076e032c5a1dc72a627a5a0.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
