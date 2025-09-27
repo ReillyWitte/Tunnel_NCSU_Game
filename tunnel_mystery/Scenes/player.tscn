@@ -1,17 +1,46 @@
-[gd_scene load_steps=4 format=3 uid="uid://yegohmvxjpig"]
+[gd_scene load_steps=7 format=3 uid="uid://yegohmvxjpig"]
 
-[ext_resource type="Texture2D" uid="uid://dks08buw6o1ug" path="res://icon.svg" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://6kwhccebgse0" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://do0m0u8rdv38l" path="res://Sprites/crowford.png" id="2_vgqql"]
+[ext_resource type="Texture2D" uid="uid://cmwvdvmt683wx" path="res://Sprites/crow smoking.png" id="3_fkybt"]
+[ext_resource type="Texture2D" uid="uid://bduwf5cr55nnm" path="res://Sprites/crow walking.png" id="4_x3wgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
 size = Vector2(119, 119)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_3smsa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vgqql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fkybt")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vgqql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_x3wgy")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_onrkg")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_4flbx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, -0.5)
 shape = SubResource("RectangleShape2D_onrkg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_3smsa")
+animation = &"walk"
