@@ -9,6 +9,8 @@ func _ready():
 	print("Interactable ready")
 	add_to_group("interactable")
 
+
+
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("player"):
 		entered = 1

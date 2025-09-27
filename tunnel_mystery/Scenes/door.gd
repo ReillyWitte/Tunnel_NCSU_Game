@@ -8,6 +8,7 @@ var entered = 0
 @onready var doorAudio = $doorSound
 
 
+
 func _ready():
 	$InteractZone.body_entered.connect(_on_interact_zone_body_entered)
 	$InteractZone.body_exited.connect(_on_interact_zone_body_exited)

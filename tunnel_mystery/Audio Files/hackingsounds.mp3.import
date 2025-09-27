@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bmsnm2i5uh658"
+path="res://.godot/imported/hackingsounds.mp3-742df16d305f337ccdec8d1f56262ac5.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/hackingsounds.mp3"
+dest_files=["res://.godot/imported/hackingsounds.mp3-742df16d305f337ccdec8d1f56262ac5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

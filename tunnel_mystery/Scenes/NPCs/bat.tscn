@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://cenmnc6xbyqpa"]
+
+[ext_resource type="Script" uid="uid://c3kqca37q6ptr" path="res://Scenes/interactable.gd" id="1_e02i8"]
+[ext_resource type="Texture2D" uid="uid://bp7pilbl538ph" path="res://Sprites/batflying2.png" id="2_pohgj"]
+[ext_resource type="Texture2D" uid="uid://j073wxxsbl6w" path="res://Sprites/batflying1.png" id="3_pirhu"]
+[ext_resource type="Texture2D" uid="uid://cxv1md21xxvjh" path="res://Sprites/batsleeping.png" id="4_sl6kp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nvbeb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pohgj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pirhu")
+}],
+"loop": true,
+"name": &"flying",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_sl6kp")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmsje"]
+size = Vector2(51, 74)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8s6bd"]
+radius = 100.08
+
+[node name="Interactable" type="StaticBody2D"]
+script = ExtResource("1_e02i8")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(635, 307)
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_nvbeb")
+animation = &"idle"
+autoplay = "idle"
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(624.5, 320)
+shape = SubResource("RectangleShape2D_pmsje")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(634, 309)
+shape = SubResource("CircleShape2D_8s6bd")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

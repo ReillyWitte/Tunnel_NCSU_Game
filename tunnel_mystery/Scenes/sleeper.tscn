@@ -1,10 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://cml8ag50tpsmv"]
+[gd_scene load_steps=13 format=3 uid="uid://cn6hqj6hyqxv3"]
 
-[ext_resource type="PackedScene" uid="uid://yegohmvxjpig" path="res://Scenes/player.tscn" id="1_ig7tw"]
-[ext_resource type="Script" uid="uid://comnemed8c1i8" path="res://Scenes/main.gd" id="1_jjvhh"]
-[ext_resource type="PackedScene" uid="uid://jdgmgd2i5rws" path="res://Scenes/door.tscn" id="2_bo1nx"]
-[ext_resource type="Texture2D" uid="uid://djka28ynht0be" path="res://Sprites/Croppedcabin2.png" id="3_kry3j"]
-[ext_resource type="AudioStream" uid="uid://d23vyu0vdblfw" path="res://Audio Files/metaldoor.mp3" id="4_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://jdgmgd2i5rws" path="res://Scenes/door.tscn" id="1_dnfrm"]
+[ext_resource type="PackedScene" uid="uid://yegohmvxjpig" path="res://Scenes/player.tscn" id="2_b1msp"]
+[ext_resource type="Texture2D" uid="uid://djka28ynht0be" path="res://Sprites/Croppedcabin2.png" id="3_da0xt"]
+[ext_resource type="AudioStream" uid="uid://d23vyu0vdblfw" path="res://Audio Files/metaldoor.mp3" id="4_d0guu"]
+[ext_resource type="PackedScene" uid="uid://cenmnc6xbyqpa" path="res://Scenes/NPCs/bat.tscn" id="5_b1msp"]
+[ext_resource type="Script" uid="uid://btmhxiqomgcgb" path="res://Scenes/path_follow_2d.gd" id="5_d0guu"]
+[ext_resource type="Script" uid="uid://duq0y3bgtssv6" path="res://Scenes/NPCs/bat.gd" id="7_rdemi"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ig7tw"]
 normal = Vector2(-1, 0)
@@ -19,8 +21,14 @@ distance = 35.0
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1bvp3"]
 normal = Vector2(1, 0)
 
+[sub_resource type="Curve2D" id="Curve2D_da0xt"]
+bake_interval = 0.01
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1154, 82, 0, 0, 0, 0, 3, 80)
+}
+point_count = 2
+
 [node name="Main" type="Node2D"]
-script = ExtResource("1_jjvhh")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(1152, 648)
@@ -50,16 +58,16 @@ position = Vector2(0, -1)
 position = Vector2(0, 306)
 shape = SubResource("WorldBoundaryShape2D_1bvp3")
 
-[node name="Door" parent="." instance=ExtResource("2_bo1nx")]
+[node name="Door" parent="." instance=ExtResource("1_dnfrm")]
 position = Vector2(1109, 346)
 scale = Vector2(0.5, 0.5)
 next_car = "res://Scenes/coach1.tscn"
 
-[node name="Door2" parent="." instance=ExtResource("2_bo1nx")]
+[node name="Door2" parent="." instance=ExtResource("1_dnfrm")]
 position = Vector2(37, 348)
 scale = Vector2(-0.5, 0.5)
 
-[node name="Node2D" parent="." instance=ExtResource("1_ig7tw")]
+[node name="Node2D" parent="." instance=ExtResource("2_b1msp")]
 position = Vector2(569, 376)
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -75,7 +83,7 @@ offset_bottom = 1.0000002
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.57, 0.57)
-texture = ExtResource("3_kry3j")
+texture = ExtResource("3_da0xt")
 expand_mode = 2
 stretch_mode = 2
 
@@ -85,6 +93,19 @@ position = Vector2(198, -147)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
 
 [node name="doorsound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_jjvhh")
+stream = ExtResource("4_d0guu")
 volume_db = -3.0
 autoplay = true
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_da0xt")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(1154, 82)
+rotation = -3.1398551
+script = ExtResource("5_d0guu")
+
+[node name="Interactable" parent="Path2D/PathFollow2D" instance=ExtResource("5_b1msp")]
+position = Vector2(931.51465, 295.38196)
+rotation = 3.1398551
+script = ExtResource("7_rdemi")

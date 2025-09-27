@@ -1,21 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://jdgmgd2i5rws"]
+
+[gd_scene load_steps=4 format=3 uid="uid://jdgmgd2i5rws"]
 
 [ext_resource type="Script" uid="uid://bfoe3y83as26e" path="res://Scenes/door.gd" id="1_p0e35"]
-[ext_resource type="Texture2D" uid="uid://w8ampa8ycves" path="res://Sprites/Rename.png" id="2_p0e35"]
-[ext_resource type="AudioStream" uid="uid://d23vyu0vdblfw" path="res://Audio Files/metaldoor.mp3" id="3_fahql"]
+[ext_resource type="Texture2D" uid="uid://c6xxae5px8i47" path="res://Sprites/TallDoor.png" id="2_p0e35"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_p0e35"]
-size = Vector2(91, 288)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w6aom"]
-radius = 97.0206
+radius = 133.01503
 
 [node name="Door" type="StaticBody2D"]
 script = ExtResource("1_p0e35")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -11)
-shape = SubResource("RectangleShape2D_p0e35")
 
 [node name="DoorSprite" type="Sprite2D" parent="."]
 scale = Vector2(0.3, 0.3)
@@ -24,7 +18,7 @@ texture = ExtResource("2_p0e35")
 [node name="InteractZone" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractZone"]
-position = Vector2(-56, -3)
+position = Vector2(-11, 233)
 shape = SubResource("CircleShape2D_w6aom")
 
 [node name="doorSound" type="AudioStreamPlayer" parent="."]
