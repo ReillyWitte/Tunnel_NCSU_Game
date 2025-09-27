@@ -23,17 +23,12 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"detective_crowford": "res://Dialog_Stuff/detective_crowford.dch"
+"detective_crowford": "res://Dialog_Timelines/detective_crowford.dch"
 }
 directories/dtl_directory={
-"timeline": "res://Dialog_Stuff/timeline.dtl"
+"timeline": "res://Dialog_Timelines/timeline.dtl"
 }
-layout/style_directory={
-"custom_style": "res://Dialog_Stuff/custom_style.tres"
-}
-layout/style_list=["res://Dialog_Stuff/custom_style.tres"]
-layout/default_style="res://Dialog_Timelines/custom_style.tres"
-glossary/default_case_sensitive=true
+layout/style_directory={}
 
 [editor_plugins]
 
