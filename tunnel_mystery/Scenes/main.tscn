@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://yegohmvxjpig" path="res://Scenes/player.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://jdgmgd2i5rws" path="res://Scenes/door.tscn" id="2_bo1nx"]
-[ext_resource type="PackedScene" uid="uid://c6qnesbh3nh6u" path="res://Scenes/interactable.tscn" id="4_jjvhh"]
+[ext_resource type="Texture2D" uid="uid://6es55q806pun" path="res://Sprites/TrainBackDrop.png" id="3_8gbba"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ig7tw"]
 normal = Vector2(-1, 0)
@@ -29,7 +29,7 @@ shape = SubResource("WorldBoundaryShape2D_ig7tw")
 position = Vector2(1152, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(-613, 15)
+position = Vector2(-605, 255)
 shape = SubResource("WorldBoundaryShape2D_0xm2m")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
@@ -59,5 +59,24 @@ scale = Vector2(-0.5, 0.5)
 [node name="Node2D" parent="." instance=ExtResource("1_ig7tw")]
 position = Vector2(571, 331)
 
-[node name="Interactable" parent="." instance=ExtResource("4_jjvhh")]
-position = Vector2(161, -240)
+[node name="TextureRect" type="TextureRect" parent="."]
+show_behind_parent = true
+z_index = -1000
+offset_left = 3.0
+offset_top = -50.0
+offset_right = 1571.0
+offset_bottom = 1275.0
+scale = Vector2(0.73, 0.73)
+texture = ExtResource("3_8gbba")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="."]
+position = Vector2(198, -147)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
+
+[node name="Node2D2" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D2"]
+scale = Vector2(1.00324, 0.997196)
