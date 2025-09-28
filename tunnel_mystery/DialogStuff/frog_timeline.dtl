@@ -5,5 +5,8 @@ if Globals.frog_dialog == 0.0:
 		[wait time="1.2"]
 		Gunther: ...no.
 		Gunther: Although, I did hear some super loud snoring from the sleeping cabin.
+	- How do you feel about Senator Freedom?
+		Gunther: I'm a big fan. Represents everything this country stands for.
+		Gunther: I actually got into a fight with that goat lady earlier about him. She just doesn't understand.
 	- Nothing. Sorry to disrupt your game.
 		Gunther: Ah, don't worry about it.

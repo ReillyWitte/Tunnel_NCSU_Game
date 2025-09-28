@@ -1,8 +1,13 @@
+if Globals.bat_wake == 1.0:
+	Dr_Ehr_Budd: Gosh, can you hear that horrible screeching from a couple cars back? God only knows what kind of evils a creature capable of making those sounds can commit.
 if Globals.dog_dialog == 0.0:
-	Dr_Ehr_Budd: Man, I wish i could relive the glory days, but nowadays I'm simply too old for basketball.
+	if Globals.bat_wake == 0.0:
+		Dr_Ehr_Budd: Man, I wish i could relive the glory days, but nowadays I'm simply too old for basketball.
 	Dr_Ehr_Budd: Sorry, I'm rambling. What can I help you with?
 	- Have you seen anything suspicious around here?
 		Dr_Ehr_Budd: Oh gosh, I don't believe so! But I've got a pretty good sniffer, so if you find any evidence I may be able to tell you who it belongs to.
+	- How do you feel about Senator Freedom?
+		Dr_Ehr_Budd: I wish he would vote for more medical research funding. Medicine can save the world! People need to realize that.
 	- Nothing at all doctor, sorry to bother.
 		Dr_Ehr_Budd: Don't worry about it!
 	Dr_Ehr_Budd: Also, you really should put down the pipe. Smoking kills your lungs.

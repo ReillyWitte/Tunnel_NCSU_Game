@@ -7,3 +7,11 @@ if Globals.rhino_dialog == 0.0:
 	set {Globals.cat_dialog} = 1.0
 elif Globals.rhino_dialog == 1.0:
 	Ricky: Sorry bub. I still need that  [color=blue]blue[/color] ticket.
+elif Globals.rhino_dialog == 2.0:
+	Ricky: What did I tell you! You need a.........
+	[wait time="0.5"]
+	Ricky: Oh, you have a [color=blue]blue[/color] first class ticket.
+	set {Globals.rhino_nice} = 1.0
+	Ricky: Right this way sir.
+elif Globals.rhino_dialog == 3.0:
+	Ricky: Good day sir.

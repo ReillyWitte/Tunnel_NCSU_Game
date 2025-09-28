@@ -9,4 +9,5 @@ if Globals.cat_dialog == 1.0:
 	- Yes
 		narrator: You carefully reach out and take the ticket from her pocket. The quality of the cardstock makes you feel very important.
 		set {Globals.blue_ticket} = 1.0
+		set {Globals.rhino_dialog} = 2.0
 	- No
