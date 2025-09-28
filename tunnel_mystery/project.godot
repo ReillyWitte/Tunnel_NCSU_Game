@@ -112,6 +112,12 @@ audio/channel_defaults={
 },
 "music": {
 "audio_bus": "",
+"fade_length": 1.9,
+"loop": false,
+"volume": 2.0
+},
+"new_channel_name": {
+"audio_bus": "",
 "fade_length": 0.0,
 "loop": true,
 "volume": 0.0

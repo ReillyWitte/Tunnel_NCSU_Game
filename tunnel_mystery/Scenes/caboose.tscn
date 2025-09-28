@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://4m2hmwiiu1x2"]
+
+[ext_resource type="PackedScene" uid="uid://cml8ag50tpsmv" path="res://Scenes/main.tscn" id="1_ewv76"]
+[ext_resource type="Texture2D" uid="uid://3joxxry56sre" path="res://Sprites/Caboose.png" id="2_7usf6"]
+[ext_resource type="Texture2D" uid="uid://b1ntalddvx1cj" path="res://Sprites/CabooseWall.png" id="3_7usf6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ewv76"]
+size = Vector2(258, 302)
+
+[node name="Main" instance=ExtResource("1_ewv76")]
+
+[node name="CollisionShape2D" parent="StaticBody2D2" index="0"]
+position = Vector2(-580, 124)
+
+[node name="CollisionShape2D" parent="StaticBody2D4" index="0"]
+position = Vector2(127, 381)
+
+[node name="Door" parent="." index="4"]
+next_car = "res://Scenes/luggage.tscn"
+next_side = 1
+
+[node name="Door2" parent="." index="5"]
+visible = false
+
+[node name="TextureRect" parent="." index="7"]
+texture = ExtResource("2_7usf6")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="." index="12"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6" index="0"]
+position = Vector2(119, 141)
+shape = SubResource("RectangleShape2D_ewv76")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="." index="13"]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D7" index="0"]
+z_index = 1
+position = Vector2(270.00003, 326)
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("3_7usf6")

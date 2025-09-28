@@ -1,0 +1,93 @@
+[gd_scene load_steps=13 format=3 uid="uid://brhbwbi8qjp3p"]
+
+[ext_resource type="PackedScene" uid="uid://cml8ag50tpsmv" path="res://Scenes/main.tscn" id="1_ckq7p"]
+[ext_resource type="Texture2D" uid="uid://bp2kvmjg4pw7" path="res://Sprites/Loco2.png" id="2_y0ab4"]
+[ext_resource type="Texture2D" uid="uid://cbbk1t7gw4q34" path="res://Sprites/Furnace.png" id="3_5oc0h"]
+[ext_resource type="Script" uid="uid://btxo2padr6g4r" path="res://Scenes/engine_door.gd" id="3_apa4b"]
+[ext_resource type="PackedScene" uid="uid://5h4m60uytdbd" path="res://Scenes/NPCs/moving_mole.tscn" id="4_wdu0v"]
+[ext_resource type="Texture2D" uid="uid://cmiequte61cag" path="res://Sprites/LocoWall.png" id="5_wdu0v"]
+[ext_resource type="PackedScene" uid="uid://dq1f1kwjca5vr" path="res://Scenes/NPCs/otter.tscn" id="7_ld8vk"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_5oc0h"]
+custom_solver_bias = 0.39
+a = Vector2(671, 287)
+b = Vector2(342, 178)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ld8vk"]
+size = Vector2(99, 190)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ckq7p"]
+a = Vector2(578, 473)
+b = Vector2(580, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_apa4b"]
+size = Vector2(195.5, 297)
+
+[sub_resource type="Curve2D" id="Curve2D_ld8vk"]
+
+[node name="Main" instance=ExtResource("1_ckq7p")]
+
+[node name="CollisionShape2D" parent="StaticBody2D2" index="0"]
+position = Vector2(-713, 164)
+
+[node name="Door" parent="." index="4"]
+visible = false
+
+[node name="Door2" parent="." index="5"]
+next_car = "res://Scenes/first_class.tscn"
+next_side = 2
+
+[node name="TextureRect" parent="." index="7"]
+texture = ExtResource("2_y0ab4")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="." index="12"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6" index="0"]
+position = Vector2(261, 152)
+shape = SubResource("SegmentShape2D_5oc0h")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="." index="13"]
+position = Vector2(-102, 81)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7" index="0"]
+position = Vector2(673, 450)
+shape = SubResource("RectangleShape2D_ld8vk")
+script = ExtResource("3_apa4b")
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="." index="14"]
+
+[node name="collision" type="CollisionShape2D" parent="StaticBody2D8" index="0"]
+position = Vector2(-9, 3)
+shape = SubResource("SegmentShape2D_ckq7p")
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="." index="15"]
+z_index = -2
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D9" index="0"]
+position = Vector2(455, 197)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_5oc0h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D9" index="1"]
+position = Vector2(452, 250)
+shape = SubResource("RectangleShape2D_apa4b")
+
+[node name="Path2D" type="Path2D" parent="." index="16"]
+curve = SubResource("Curve2D_ld8vk")
+
+[node name="MovingInteractable" parent="Path2D" index="0" instance=ExtResource("4_wdu0v")]
+z_index = -1
+position = Vector2(340, 348)
+timeline = "mole_timeline"
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="." index="17"]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D10" index="0"]
+z_index = 1
+position = Vector2(571, 330)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("5_wdu0v")
+
+[node name="Interactable" parent="." index="18" instance=ExtResource("7_ld8vk")]
+position = Vector2(338, 161)
+timeline = "otter_timeline"

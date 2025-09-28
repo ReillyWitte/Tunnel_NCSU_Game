@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bmvbi5brk6n3m"]
+[gd_scene load_steps=7 format=3 uid="uid://bmvbi5brk6n3m"]
 
 [ext_resource type="PackedScene" uid="uid://cml8ag50tpsmv" path="res://Scenes/main.tscn" id="1_p2scx"]
 [ext_resource type="Texture2D" uid="uid://dxihhccj250qo" path="res://Sprites/Chair.png" id="2_1hbbv"]
+[ext_resource type="Texture2D" uid="uid://dw1el1pf3u6ti" path="res://Sprites/table.png" id="5_vnqlc"]
 [ext_resource type="PackedScene" uid="uid://cfm2wcqna76q3" path="res://Scenes/NPCs/herring.tscn" id="7_atycd"]
 [ext_resource type="PackedScene" uid="uid://c3imoo0jfm2ph" path="res://Scenes/NPCs/dog.tscn" id="8_20q3q"]
 
@@ -50,12 +51,13 @@ shape = SubResource("RectangleShape2D_yipkt")
 
 [node name="Chair3" type="StaticBody2D" parent="." index="11"]
 z_index = -170
-position = Vector2(266, -295)
+position = Vector2(427, -292)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair3" index="0"]
 position = Vector2(158, 603)
 scale = Vector2(0.12, 0.12)
 texture = ExtResource("2_1hbbv")
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chair3" index="1"]
 position = Vector2(152, 615)
@@ -137,3 +139,11 @@ timeline = "herring_timeline"
 [node name="Dog" parent="." index="19" instance=ExtResource("8_20q3q")]
 position = Vector2(-174, 224)
 timeline = "dog_timeline"
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="." index="22"]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D6" index="0"]
+z_index = -1
+position = Vector2(272, 306)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_vnqlc")

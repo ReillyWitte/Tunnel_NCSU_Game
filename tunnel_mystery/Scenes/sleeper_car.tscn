@@ -16,6 +16,9 @@ point_count = 2
 
 [node name="Main" instance=ExtResource("1_hb68l")]
 
+[node name="CollisionShape2D" parent="StaticBody2D2" index="0"]
+position = Vector2(-596, 153)
+
 [node name="Door" parent="." index="4"]
 next_car = "res://Scenes/dining.tscn"
 next_side = 1
