@@ -16,6 +16,14 @@ point_count = 2
 
 [node name="Main" instance=ExtResource("1_hb68l")]
 
+[node name="Door" parent="." index="4"]
+next_car = "res://Scenes/dining.tscn"
+next_side = 1
+
+[node name="Door2" parent="." index="5"]
+next_car = "res://Scenes/luggage.tscn"
+next_side = 2
+
 [node name="TextureRect" parent="." index="7"]
 metadata/_edit_use_anchors_ = true
 

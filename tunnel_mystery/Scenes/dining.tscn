@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://dygxesllinm01"]
+[gd_scene load_steps=6 format=3 uid="uid://dygxesllinm01"]
 
 [ext_resource type="PackedScene" uid="uid://cml8ag50tpsmv" path="res://Scenes/main.tscn" id="1_6qqn2"]
+[ext_resource type="Texture2D" uid="uid://dud5yxpgmkgqw" path="res://Sprites/bar.png" id="2_gbom6"]
+[ext_resource type="Texture2D" uid="uid://bcwei0bs17yeh" path="res://Sprites/barback.png" id="3_mgylx"]
+[ext_resource type="PackedScene" uid="uid://b8k28vtkmk1q1" path="res://Scenes/NPCs/penguin.tscn" id="4_8t3ug"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mgylx"]
+size = Vector2(416.5, 157)
 
 [node name="Main" instance=ExtResource("1_6qqn2")]
 
@@ -9,5 +15,30 @@ next_car = "res://Scenes/coach2.tscn"
 next_side = 1
 
 [node name="Door2" parent="." index="5"]
-next_car = "res://Scenes/sleeper.tscn"
+next_car = "res://Scenes/sleeper_car.tscn"
 next_side = 2
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="." index="12"]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D6" index="0"]
+z_index = -1
+position = Vector2(667, 330)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_gbom6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6" index="1"]
+position = Vector2(692.75, 294.5)
+shape = SubResource("RectangleShape2D_mgylx")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="." index="13"]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D7" index="0"]
+z_index = -2
+position = Vector2(691, 190.00002)
+scale = Vector2(0.725, 0.725)
+texture = ExtResource("3_mgylx")
+
+[node name="Interactable" parent="." index="14" instance=ExtResource("4_8t3ug")]
+z_index = -2
+position = Vector2(100, -50)
+timeline = "penguin_timeline"

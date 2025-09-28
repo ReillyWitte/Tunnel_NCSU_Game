@@ -25,8 +25,7 @@ func get_input():
 	if input_direction == Vector2.ZERO:
 		animated_sprite.play("idle")
 	else:
-		if Dialogic.current_timeline == null:
-			animated_sprite.play("walk")
+		animated_sprite.play("walk")
 		
 		# Flip depending on direction (optional, for left/right)
 		if Dialogic.current_timeline == null:
@@ -42,3 +41,6 @@ func _physics_process(_delta):
 	if Dialogic.current_timeline == null:
 		get_input()
 	move_and_slide()
+	
+	if Dialogic.current_timeline != null:
+		animated_sprite.play("idle")
