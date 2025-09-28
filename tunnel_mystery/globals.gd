@@ -9,6 +9,10 @@ func change_car(next_car: String, car_side: int):
 	door_side = car_side
 	get_tree().change_scene_to_file(next_car)
 
+var total_time = 600
+var time_remaining := 600  # 10 minute
+var timer_start = 0
+
 # Character Dialog Flags
 var eagle_dialog = 0.0
 var lion_dialog = 0.0
@@ -30,6 +34,7 @@ var coin = 0
 var lockpick = 1
 var luggage_paper = 0
 var blue_ticket = 0
+var fuse = 0
 
 # Other Flags
 var game_start = 0

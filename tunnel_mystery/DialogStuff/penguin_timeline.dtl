@@ -5,3 +5,5 @@ if Globals.penguin_dialog == 0.0:
 		Spencer: Good luck with your investigation detective.
 	- No,  just passing through.
 		Spencer: Alright. Enjoy your ride sir.
+	- How do you feel about Senator Freedom?
+		Spencer: The Senator? He's usually my best customer. I also appreciate his attention to the climate issues in Antarctica.

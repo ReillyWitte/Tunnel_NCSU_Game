@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjroc6nktjof4"]
+
+[ext_resource type="Script" uid="uid://8s0f76ptlgck" path="res://Scenes/timer.gd" id="1_pvhx5"]
+
+[node name="Timer" type="Node2D"]
+script = ExtResource("1_pvhx5")
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+autostart = true
+
+[node name="labelmaker" type="Label" parent="."]
+offset_left = 870.0
+offset_top = 4.0
+offset_right = 1138.0
+offset_bottom = 49.0
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 2
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

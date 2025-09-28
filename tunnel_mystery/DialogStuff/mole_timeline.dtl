@@ -6,3 +6,15 @@ if Globals.mole_dialog == 0.0:
 		Earnest: I hope you find what you're looking for.
 	- No, thank you.
 		Earnest: Well I wish you well! I need to get back to work.
+elif Globals.mole_dialog == 1.0:
+	Earnest: Hey man. Can't you see I'm on my break?
+elif Globals.mole_dialog == 2.0:
+	Earnest: Hey detective, look what I found back here. This is unmistakenly a [b]dynamite[/b] fuse.
+	narrator: You examine the object, and it is definitely a fuse. You slide it in your pocket as evidence.
+	set {Globals.fuse} = 1.0
+	- Thank you!
+		Earnest: Of course! Happy to help.
+	- You didn't plant this did you?
+		Earnest: Now why would I do that? You're one suspicious corvid.
+	Earnest: Now if you'll excuse me, I'm going to continue my break.
+	set {Globals.mole_dialog} = 1.0

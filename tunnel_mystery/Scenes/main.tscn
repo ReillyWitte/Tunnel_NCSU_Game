@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cml8ag50tpsmv"]
+[gd_scene load_steps=15 format=3 uid="uid://cml8ag50tpsmv"]
 
 [ext_resource type="PackedScene" uid="uid://yegohmvxjpig" path="res://Scenes/player.tscn" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://comnemed8c1i8" path="res://Scenes/main.gd" id="1_jjvhh"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cvd3nlgpnxx8s" path="res://Sprites/background full.png" id="7_344ge"]
 [ext_resource type="Script" uid="uid://c6215vuol8ms2" path="res://addons/sudden_fade_plugin/fade_transition_manager.gd" id="8_ynf5e"]
 [ext_resource type="PackedScene" uid="uid://bmu8wlits5ww7" path="res://addons/sudden_fade_plugin/demo/room2.tscn" id="9_hptm8"]
+[ext_resource type="PackedScene" uid="uid://cjroc6nktjof4" path="res://Scenes/timer.tscn" id="10_hptm8"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ig7tw"]
 normal = Vector2(-1, 0)
@@ -122,3 +123,5 @@ color = Color(0, 0, 0, 1)
 script = ExtResource("8_ynf5e")
 next_scene = ExtResource("9_hptm8")
 metadata/_custom_type_script = "uid://c6215vuol8ms2"
+
+[node name="Timer" parent="." instance=ExtResource("10_hptm8")]
