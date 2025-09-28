@@ -44,4 +44,14 @@ var bat_wake = 0
 var goat_interrogate = 0
 var rhino_nice = 0
 var mole_smoke = 0
+var mole_room = ""
+
+# Mole walking function
+func _process(delta):
+	if ((float(Globals.time_remaining) / Globals.total_time) == .27):
+			Globals.mole_smoke = 1
+			
+	if ((float(Globals.time_remaining) / Globals.total_time) == .25):
+			Globals.mole_smoke = 2
+	
 var luggage_labels = 0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://ts8qlbvwjy2r"]
+[gd_scene load_steps=17 format=3 uid="uid://ts8qlbvwjy2r"]
 
 [ext_resource type="PackedScene" uid="uid://cml8ag50tpsmv" path="res://Scenes/main.tscn" id="1_ndwjx"]
 [ext_resource type="Texture2D" uid="uid://dxihhccj250qo" path="res://Sprites/Chair.png" id="3_tqt02"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://dahcdql2axi8s" path="res://Scenes/NPCs/rhino_moving.tscn" id="8_snxeu"]
 [ext_resource type="PackedScene" uid="uid://dudu8ewe81w2f" path="res://Scenes/NPCs/frog.tscn" id="9_w40gk"]
 [ext_resource type="Texture2D" uid="uid://bctlthfa2wb0l" path="res://Sprites/bettingtable.png" id="10_sl753"]
+[ext_resource type="PackedScene" uid="uid://5h4m60uytdbd" path="res://Scenes/NPCs/moving_mole.tscn" id="11_nsae1"]
+[ext_resource type="Script" uid="uid://bvjvmvo8dmvq0" path="res://Scenes/NPCs/fc_mole.gd" id="12_4gduy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yipkt"]
 size = Vector2(81.5, 135)
@@ -22,6 +24,12 @@ point_count = 2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w40gk"]
 size = Vector2(85.5, 95.5)
+
+[sub_resource type="Curve2D" id="Curve2D_uwvhl"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1254, 401, 0, 0, 0, 0, -101, 401)
+}
+point_count = 2
 
 [node name="Main" instance=ExtResource("1_ndwjx")]
 
@@ -215,3 +223,15 @@ texture = ExtResource("10_sl753")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6" index="1"]
 position = Vector2(274, 322.25)
 shape = SubResource("RectangleShape2D_w40gk")
+
+[node name="Path2D2" type="Path2D" parent="." index="28"]
+position = Vector2(-11, 19)
+curve = SubResource("Curve2D_uwvhl")
+
+[node name="MovingInteractable" parent="Path2D2" index="0" instance=ExtResource("11_nsae1")]
+position = Vector2(1254, 401)
+rotates = false
+loop = false
+script = ExtResource("12_4gduy")
+timeline = "mole_timeline"
+speed = 3.0

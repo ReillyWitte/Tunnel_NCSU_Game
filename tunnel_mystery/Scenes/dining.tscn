@@ -1,15 +1,23 @@
-[gd_scene load_steps=8 format=3 uid="uid://dygxesllinm01"]
+[gd_scene load_steps=11 format=3 uid="uid://dygxesllinm01"]
 
 [ext_resource type="PackedScene" uid="uid://cml8ag50tpsmv" path="res://Scenes/main.tscn" id="1_6qqn2"]
 [ext_resource type="Texture2D" uid="uid://y53tq2ixecop" path="res://Sprites/bar(1).png" id="2_mgylx"]
 [ext_resource type="Texture2D" uid="uid://bcwei0bs17yeh" path="res://Sprites/barback.png" id="3_mgylx"]
 [ext_resource type="PackedScene" uid="uid://b8k28vtkmk1q1" path="res://Scenes/NPCs/penguin.tscn" id="4_8t3ug"]
 [ext_resource type="PackedScene" uid="uid://c0x5f4u4wauve" path="res://Scenes/NPCs/cow_moving.tscn" id="5_8t3ug"]
+[ext_resource type="PackedScene" uid="uid://5h4m60uytdbd" path="res://Scenes/NPCs/moving_mole.tscn" id="6_dfvxl"]
+[ext_resource type="Script" uid="uid://bvjvmvo8dmvq0" path="res://Scenes/NPCs/fc_mole.gd" id="7_kimbo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mgylx"]
 size = Vector2(416.5, 157)
 
 [sub_resource type="Curve2D" id="Curve2D_8t3ug"]
+
+[sub_resource type="Curve2D" id="Curve2D_tmpcd"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1254, 401, 0, 0, 0, 0, -101, 401)
+}
+point_count = 2
 
 [node name="Main" instance=ExtResource("1_6qqn2")]
 
@@ -53,3 +61,13 @@ curve = SubResource("Curve2D_8t3ug")
 z_index = -1
 position = Vector2(284, 304)
 timeline = "cow_timeline"
+
+[node name="Path2D2" type="Path2D" parent="." index="17"]
+position = Vector2(-11, 19)
+curve = SubResource("Curve2D_tmpcd")
+
+[node name="MovingInteractable" parent="Path2D2" index="0" instance=ExtResource("6_dfvxl")]
+position = Vector2(1254, 401)
+rotates = false
+loop = false
+script = ExtResource("7_kimbo")

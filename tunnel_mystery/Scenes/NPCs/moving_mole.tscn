@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://5h4m60uytdbd"]
+[gd_scene load_steps=11 format=3 uid="uid://5h4m60uytdbd"]
 
 [ext_resource type="Script" uid="uid://o3ilgqau8ndb" path="res://Scenes/NPCs/moving mole.gd" id="1_cb4vv"]
 [ext_resource type="Script" uid="uid://5a6cytjve081" path="res://Scenes/NPCs/mole_smoke.gd" id="2_bhdim"]
@@ -6,9 +6,18 @@
 [ext_resource type="Texture2D" uid="uid://nj7p7uxbcqh5" path="res://Sprites/MoleShovel2.png" id="4_bhdim"]
 [ext_resource type="Texture2D" uid="uid://tvsdy08iphb4" path="res://Sprites/MoleWalk1.png" id="4_eafns"]
 [ext_resource type="Texture2D" uid="uid://b8quvciixe3n6" path="res://Sprites/MoleWalk2.png" id="5_cb4vv"]
+[ext_resource type="Script" uid="uid://hx41ao7kd72q" path="res://Scenes/NPCs/mole-bs.gd" id="7_bhdim"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_exoap"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_eafns")
+}],
+"loop": true,
+"name": &"chill",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_cb4vv")
@@ -33,12 +42,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eafns"]
-size = Vector2(84, 119)
+size = Vector2(84, 76.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_debwt"]
 size = Vector2(212.5, 236.625)
 
 [node name="MovingInteractable" type="PathFollow2D"]
+z_index = -1
 script = ExtResource("1_cb4vv")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -47,12 +57,13 @@ script = ExtResource("2_bhdim")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
 scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_exoap")
-animation = &"walking"
+animation = &"chill"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-4, 12)
+position = Vector2(-4, 33.25)
 shape = SubResource("RectangleShape2D_eafns")
+script = ExtResource("7_bhdim")
 
 [node name="Area2D" type="Area2D" parent="StaticBody2D"]
 

@@ -1,11 +1,11 @@
 extends PathFollow2D
 
 var entered = 0
-@export var timeline = ""
+var timeline = "mole_timeline"
 @export var idle_animation = ""
 @export var moving_animation = ""
 
-@export var speed: float = 100.0
+var speed: float = 40
 var direction := 1  # 1 = forward, -1 = backward
 
 func _ready():
@@ -28,15 +28,13 @@ func _process(delta):
 	if entered == 1 and Input.is_action_just_pressed("ui_accept"):
 		if Dialogic.current_timeline == null:
 			Dialogic.start(timeline)
-			
-	if (float(Globals.time_remaining) / Globals.total_time) == .96:
-		Globals.mole_smoke = 1
 		
 	if Globals.mole_smoke == 1:
 		Globals.mole_dialog = 1
-		progress += direction * direction * speed
-		if progress_ratio == 1:
-			visible = 0
-			Globals.mole_engine = 1
-		
+		progress += direction * speed
+		if progress_ratio >= .01:
+			Globals.mole_smoke = 2
+	if Globals.mole_smoke == 2:
+		visible = 0
+		Globals.mole_dialog = 2
 		

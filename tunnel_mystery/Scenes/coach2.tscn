@@ -1,13 +1,21 @@
-[gd_scene load_steps=7 format=3 uid="uid://bmvbi5brk6n3m"]
+[gd_scene load_steps=10 format=3 uid="uid://bmvbi5brk6n3m"]
 
 [ext_resource type="PackedScene" uid="uid://cml8ag50tpsmv" path="res://Scenes/main.tscn" id="1_p2scx"]
 [ext_resource type="Texture2D" uid="uid://dxihhccj250qo" path="res://Sprites/Chair.png" id="2_1hbbv"]
 [ext_resource type="Texture2D" uid="uid://dw1el1pf3u6ti" path="res://Sprites/table.png" id="5_vnqlc"]
+[ext_resource type="PackedScene" uid="uid://5h4m60uytdbd" path="res://Scenes/NPCs/moving_mole.tscn" id="6_atycd"]
+[ext_resource type="Script" uid="uid://bvjvmvo8dmvq0" path="res://Scenes/NPCs/fc_mole.gd" id="7_20q3q"]
 [ext_resource type="PackedScene" uid="uid://cfm2wcqna76q3" path="res://Scenes/NPCs/herring.tscn" id="7_atycd"]
 [ext_resource type="PackedScene" uid="uid://c3imoo0jfm2ph" path="res://Scenes/NPCs/dog.tscn" id="8_20q3q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yipkt"]
 size = Vector2(81.5, 135)
+
+[sub_resource type="Curve2D" id="Curve2D_1e2j1"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1254, 401, 0, 0, 0, 0, -101, 401)
+}
+point_count = 2
 
 [node name="Main" instance=ExtResource("1_p2scx")]
 
@@ -150,3 +158,15 @@ z_index = -1
 position = Vector2(272, 306)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("5_vnqlc")
+
+[node name="Path2D2" type="Path2D" parent="." index="24"]
+position = Vector2(-11, 19)
+curve = SubResource("Curve2D_1e2j1")
+
+[node name="MovingInteractable" parent="Path2D2" index="0" instance=ExtResource("6_atycd")]
+position = Vector2(1254, 401)
+rotates = false
+loop = false
+script = ExtResource("7_20q3q")
+timeline = "mole_timeline"
+speed = 2.0

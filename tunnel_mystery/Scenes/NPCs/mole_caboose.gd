@@ -1,11 +1,11 @@
 extends PathFollow2D
 
 var entered = 0
-var timeline = "mole_timeline            "
+@export var timeline = ""
 @export var idle_animation = ""
 @export var moving_animation = ""
 
-var speed: float = 10
+@export var speed: float = 100.0
 var direction := 1  # 1 = forward, -1 = backward
 
 func _ready():
@@ -34,8 +34,8 @@ func _process(delta):
 		progress += direction * speed
 		if progress_ratio >= .9:
 			Globals.mole_smoke = 2
-			visible = 0
+			visible = 1
+			Globals.mole_dialog = 2
 	if Globals.mole_smoke == 2:
-		visible = 0
-		Globals.mole_dialog = 2
+		progress_ratio = 1
 		
