@@ -18,3 +18,7 @@ elif Globals.mole_dialog == 2.0:
 		Earnest: Now why would I do that? You're one suspicious corvid.
 	Earnest: Now if you'll excuse me, I'm going to continue my break.
 	set {Globals.mole_dialog} = 1.0
+elif Globals.mole_dialog == 3.0:
+	Earnest: [b]STOPPPP!!!!![/b]
+	Earnest: The boss told me not to let anyone in there under any circumstances. I'm sorry detective.
+	set {Globals.mole_dialog} = 0
