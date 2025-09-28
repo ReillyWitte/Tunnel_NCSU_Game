@@ -1,3 +1,13 @@
+if Globals.fuse == 1.0:
+	Dr_Ehr_Budd: Why you look excited, do you have something to show me?
+	- Yes, can you sniff this fuse?
+		Dr_Ehr_Budd: Oooooh evidence, of course.
+		Dr_Ehr_Budd: [i]Sniff... Sniff... Sniff[/i]
+		Dr_Ehr_Budd: Ah yes, the stench is unmistakable. It definitely was handled by a cat.
+		Dr_Ehr_Budd: I hope that helps.
+	- No.
+		Dr_Ehr_Budd: Well ok then.
+	[end_timeline]
 if Globals.bat_wake == 1.0:
 	Dr_Ehr_Budd: Gosh, can you hear that horrible screeching from a couple cars back? God only knows what kind of evils a creature capable of making those sounds can commit.
 if Globals.dog_dialog == 0.0:

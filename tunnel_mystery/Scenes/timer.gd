@@ -5,10 +5,10 @@ func _on_timer_timeout() -> void:
 	print(Globals.time_remaining)
 	var minutes = Globals.time_remaining / 60
 	var seconds = Globals.time_remaining % 60
-	$labelmaker.text = str(minutes) + ":" + str(seconds)
+	$labelmaker.text = str(minutes) + " minutes and " + str(seconds) + " seconds"
 
 
 func _on_ready() -> void:
 	var minutes = Globals.time_remaining / 60
 	var seconds = Globals.time_remaining % 60
-	$labelmaker.text = str(minutes) + ":" + str(seconds) # Replace with function body.
+	$labelmaker.text = str(minutes) + " minutes and " + str(seconds) + " seconds" # Replace with function body.
