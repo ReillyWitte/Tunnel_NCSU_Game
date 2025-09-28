@@ -16,6 +16,8 @@ if Globals.goat_dialog == 0.0:
 elif Globals.goat_dialog == 1.0:
 	- Is this coin fake?
 		Esmeralda: Of course not! It's as real as the snot in my nose.
+	- How do you feel about Senator Freedom?
+		Esmeralda: [i]Ugh[/i]. That jerk? No comment.
 	- Why do you keep checking your watch? | [if Globals.goat_interrogate == "1"] [else="hide"]
 		Esmeralda: Wait, are you suspicious of me? I'm just waiting for the snack cart. I am [b]starving[/b].
 		Esmeralda: I wouldn't hurt a fly.
