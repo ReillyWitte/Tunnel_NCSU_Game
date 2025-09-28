@@ -10,7 +10,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8oydd"]
 size = Vector2(92.921875, 85.890625)
 
-[node name="Main" instance=ExtResource("1_akk4n")]
+[node name="Main2" instance=ExtResource("1_akk4n")]
 
 [node name="Door" parent="." index="4"]
 next_car = "res://Scenes/engine.tscn"

@@ -1,7 +1,5 @@
 extends AudioStreamPlayer2D
 
-
-
 func _ready() -> void:
 	var dialogic = get_node("/root/Dialogic")
 	dialogic.signal_event.connect(_on_dialogic_signal)
