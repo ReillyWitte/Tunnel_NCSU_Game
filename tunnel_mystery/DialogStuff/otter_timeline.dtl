@@ -1,5 +1,13 @@
 if Globals.otter_dialog == 0.0:
 	Oswald: What's the meaning of this. You're not supposed to be in here!
 	- I'm a detective, and if this train keeps moving it may very well barrel straight into a pit. You need to hit the brakes!
-		Oswald: Oh my!
+		Oswald: Oh my! I better hit the brakes right away!
+		narrator: Conductor Oswald rushes to hit the brakes. However, when he pulls the lever it snaps right off.
+		Oswald: Ah! Oh no!
+		Oswald: I won't be able to fix this before the train leaves the tunnel. You better go find the perp quick!
+		- Do you have anything that may help?
+			Oswald: I do have a log of everyone and their associated luggage if you need to find evidence in their baggage!
+			narrator: Oswald give you a sheet of paper, describing everyone's luggage.
+			set {Globals.luggage_paper} = 1.0
 	- Oh, sorry. I got lost.
+		Oswald: Get otter here!

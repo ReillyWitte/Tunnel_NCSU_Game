@@ -1,0 +1,26 @@
+if Globals.cow_dialog == 0.0:
+	Meredith: Well hello hun. Would you like something to eat?
+	- No mam. I'm conducting an investigation, have you seen anything suspicious?
+		Meredith: Ooooh. A mystery! I haven't seen anything, but I have been collecting trash. Maybe there's some evidence in my trash can. Would you care to look?
+		- Yes
+			Meredith: Here you go.
+			narrator: You rummage through the trash, but the only thing of any note is a crumbled up newspaper. Would you like to take a look?
+			- Yes
+				label newspaper
+				narrator: Some notable headlines include\:
+				narrator: [i]"Does Senator Freedom hate the working class?"[/i]
+				narrator: [i]"Major Fossil Fuel Bill Awaits Third Vote in Senate Stalemate"[/i]
+				narrator: [i]"Senator Freedom Votes to Ban Cigarettes[/i]
+				Meredith: Let me know if you need another look!
+				set {Globals.cow_dialog} = 1.0
+			- No
+				Meredith: Alright! Let me know if you ever want to take a look.
+		- No
+			Meredith: Alright then. Good luck!
+elif Globals.cow_dialog == 1.0:
+	Meredith: Would you like to look in the trash?
+	- Yes
+		narrator: You rummage through the trash, but the only thing of any note is a crumbled up newspaper.
+		jump newspaper
+	- No
+		Meredith: Ok, tell me if you change your mind.

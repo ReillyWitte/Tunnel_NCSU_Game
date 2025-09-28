@@ -2,7 +2,7 @@ if Globals.frog_dialog == 0.0:
 	Gunther: Why salutations! What can I do for you?
 	- I'm investigating a case. Seen anything weird?
 		Gunther: Erm...
-		[wait time="1.5"]
+		[wait time="1.2"]
 		Gunther: ...no.
 		Gunther: Although, I did hear some super loud snoring from the sleeping cabin.
 	- Nothing. Sorry to disrupt your game.

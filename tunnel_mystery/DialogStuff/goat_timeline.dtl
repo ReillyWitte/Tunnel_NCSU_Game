@@ -8,5 +8,14 @@ if Globals.goat_dialog == 0.0:
 	- Sure I'll buy one.
 		Esmeralda: Yes! You won't regret it.
 		narrator: You hand her a dollar, and she gives you a rusty old coin. It doesn't seem worth much.
-		[style]
 		Esmeralda: Have a good one mister!
+		set {Globals.goat_dialog} = 1.0
+	- Why do you keep checking your watch? | [if Globals.goat_interrogate == "1"] [else="hide"]
+		Esmeralda: Wait, are you suspicious of me? I'm just waiting for the snack cart. I am [b]starving[/b].
+		Esmeralda: I wouldn't hurt a fly.
+elif Globals.goat_dialog == 1.0:
+	- Is this coin fake?
+		Esmeralda: Of course not! It's as real as the snot in my nose.
+	- Why do you keep checking your watch? | [if Globals.goat_interrogate == "1"] [else="hide"]
+		Esmeralda: Wait, are you suspicious of me? I'm just waiting for the snack cart. I am [b]starving[/b].
+		Esmeralda: I wouldn't hurt a fly.

@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bduwf5cr55nnm" path="res://Sprites/crow walking.png" id="4_x3wgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
-size = Vector2(4.6427474, 39.6216)
+size = Vector2(4.6427474, 45.055103)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3smsa"]
 animations = [{
@@ -45,7 +45,7 @@ scale = Vector2(0.15, 0.15)
 texture = ExtResource("2_fkybt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-9.822142, 54.5)
+position = Vector2(-9.822142, 49.495743)
 scale = Vector2(13, 1.842)
 shape = SubResource("RectangleShape2D_onrkg")
 

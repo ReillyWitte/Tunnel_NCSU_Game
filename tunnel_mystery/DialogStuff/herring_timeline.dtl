@@ -6,7 +6,7 @@ if Globals.herring_dialog == 0.0:
 		[wait time="1.0"]
 		Herrington: That wasn't funny.
 		Herrington: But I did see something weird.
-		Herrington: Before the cat went to her sleeping quarters, she tried to take a bite out of me!
+		Herrington: While the cat was walking back from first class to her sleeping quarters, she tried to take a bite out of me!
 		Herrington: I slapped some sense into her, but gosh she's a weirdo.
 	- Nothing. Sorry to bother you.
 		Herrington: Alright. Have a good day!

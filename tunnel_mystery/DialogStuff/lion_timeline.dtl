@@ -1,6 +1,12 @@
 if Globals.lion_dialog == 0.0:
-	Sir_Reginald_Atwood: Well hello detective! Is something the matter?
-	- Yes
-		Sir_Reginald_Atwood: I can help.
-	- No
+	Sir_Reginald_Atwood: Well hello detective! Can I help you with something?
+	- Yes. I'm invesigating a case. Have you seen anything suspicious?
+		Sir_Reginald_Atwood: Oh my!
+		Sir_Reginald_Atwood: Well, now that you mention it the goat does seem a little tense. When I walked by earlier she kept checking her watch.
+		Sir_Reginald_Atwood: Maybe you should interrogate her?
+		set {Globals.goat_dialog} = 1.0
+		set {Globals.lion_dialog} = 1.0
+	- No, everything is quite alright.
 		Sir_Reginald_Atwood: Ok, let me know if you need anything.
+elif Globals.lion_dialog == 1.0:
+	Sir_Reginald_Atwood: I wish you well detective.

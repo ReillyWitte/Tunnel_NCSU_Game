@@ -25,6 +25,7 @@ trainsounds="*res://Scenes/trainsounds.tscn"
 
 directories/dch_directory={
 "Angelina": "res://DialogStuff/Characters/Angelina.dch",
+"DialogStuff/detective_crowford": "res://DialogStuff/detective_crowford.dch",
 "Dr_Ehr_Budd": "res://DialogStuff/Characters/Dr_Ehr_Budd.dch",
 "Earnest": "res://DialogStuff/Characters/Earnest.dch",
 "Esmeralda": "res://DialogStuff/Characters/Esmeralda.dch",

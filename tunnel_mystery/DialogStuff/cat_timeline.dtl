@@ -2,3 +2,11 @@ if Globals.cat_dialog == 0.0:
 	Susan: [i]Zzzzzzzz.....[/i]
 	Susan: [i]Zzzzzzzzzzzzzzzzzzz....[/i]
 	narrator: She seems to be deep asleep.
+if Globals.cat_dialog == 1.0:
+	Susan: [i]Zzzzzzzz.....[/i]
+	Susan: [i]Zzzzzzzzzzzzzzzzzzz....[/i]
+	narrator: She seems to be deep asleep, but you notice a shiny [color=blue]blue[/color] first class ticket sticking out of her pocket. Do you take it?
+	- Yes
+		narrator: You carefully reach out and take the ticket from her pocket. The quality of the cardstock makes you feel very important.
+		set {Globals.blue_ticket} = 1.0
+	- No

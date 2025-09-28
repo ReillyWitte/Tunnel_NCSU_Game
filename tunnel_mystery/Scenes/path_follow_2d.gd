@@ -3,5 +3,5 @@ extends PathFollow2D
 @export var speed: float = 100.0
 
 func _process(delta: float) -> void:
-	if Globals.wake_bat:
+	if Globals.bat_wake:
 		progress += speed * delta

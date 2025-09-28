@@ -28,7 +28,10 @@ var frog_dialog = 0.0
 # Item Flags
 var coin = 0
 var lockpick = 1
+var luggage_paper = 0
+var blue_ticket = 0
 
 # Other Flags
 var game_start = 0
 var bat_wake = 0
+var goat_interrogate = 0

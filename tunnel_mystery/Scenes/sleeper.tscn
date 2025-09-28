@@ -1,12 +1,13 @@
-[gd_scene load_steps=13 format=3 uid="uid://cn6hqj6hyqxv3"]
+[gd_scene load_steps=15 format=3 uid="uid://cn6hqj6hyqxv3"]
 
 [ext_resource type="PackedScene" uid="uid://jdgmgd2i5rws" path="res://Scenes/door.tscn" id="1_dnfrm"]
 [ext_resource type="PackedScene" uid="uid://yegohmvxjpig" path="res://Scenes/player.tscn" id="2_b1msp"]
 [ext_resource type="Texture2D" uid="uid://djka28ynht0be" path="res://Sprites/Croppedcabin2.png" id="3_da0xt"]
 [ext_resource type="AudioStream" uid="uid://d23vyu0vdblfw" path="res://Audio Files/metaldoor.mp3" id="4_d0guu"]
-[ext_resource type="PackedScene" uid="uid://cenmnc6xbyqpa" path="res://Scenes/NPCs/bat.tscn" id="5_b1msp"]
-[ext_resource type="Script" uid="uid://btmhxiqomgcgb" path="res://Scenes/path_follow_2d.gd" id="5_d0guu"]
-[ext_resource type="Script" uid="uid://duq0y3bgtssv6" path="res://Scenes/NPCs/bat.gd" id="7_rdemi"]
+[ext_resource type="PackedScene" uid="uid://pqcs84wu2sxs" path="res://Scenes/NPCs/moving_bat.tscn" id="5_d0guu"]
+[ext_resource type="Texture2D" uid="uid://c7nfjxrx70hha" path="res://Sprites/SleepingBoothOpen.png" id="6_da0xt"]
+[ext_resource type="Texture2D" uid="uid://cyt8s62ngs0hw" path="res://Sprites/SleepingBoothClosed.png" id="7_d0guu"]
+[ext_resource type="PackedScene" uid="uid://48mmcgia6sh5" path="res://Scenes/NPCs/sleeping_cat.tscn" id="8_rdemi"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ig7tw"]
 normal = Vector2(-1, 0)
@@ -14,19 +15,20 @@ distance = 3.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0xm2m"]
 normal = Vector2(0, 1)
-distance = 35.0
+distance = 43.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_h2yge"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1bvp3"]
 normal = Vector2(1, 0)
 
-[sub_resource type="Curve2D" id="Curve2D_da0xt"]
-bake_interval = 0.01
+[sub_resource type="Curve2D" id="Curve2D_dnfrm"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1154, 82, 0, 0, 0, 0, 3, 80)
+"points": PackedVector2Array(0, 0, 0, 0, 800, 131, 0, 0, 0, 0, 1051, 131)
 }
 point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_rdemi"]
 
 [node name="Main" type="Node2D"]
 
@@ -98,14 +100,54 @@ volume_db = -3.0
 autoplay = true
 
 [node name="Path2D" type="Path2D" parent="."]
-curve = SubResource("Curve2D_da0xt")
+curve = SubResource("Curve2D_dnfrm")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(1154, 82)
-rotation = -3.1398551
-script = ExtResource("5_d0guu")
+[node name="MovingInteractable" parent="Path2D" instance=ExtResource("5_d0guu")]
+z_index = -1
+position = Vector2(892.95856, 131)
+progress = 92.9596
+loop = false
+timeline = "bat_timeline"
+idle_animation = "idle"
+moving_animation = "flying"
+speed = 200.0
 
-[node name="Interactable" parent="Path2D/PathFollow2D" instance=ExtResource("5_b1msp")]
-position = Vector2(931.51465, 295.38196)
-rotation = 3.1398551
-script = ExtResource("7_rdemi")
+[node name="sleeper" type="StaticBody2D" parent="."]
+z_index = -1
+position = Vector2(7, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="sleeper"]
+z_index = -1
+position = Vector2(218, 204)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_da0xt")
+
+[node name="sleeper2" type="StaticBody2D" parent="."]
+z_index = -1
+position = Vector2(356, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="sleeper2"]
+z_index = -1
+position = Vector2(218, 204)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("7_d0guu")
+
+[node name="sleeper3" type="StaticBody2D" parent="."]
+z_index = -1
+position = Vector2(721, -4)
+
+[node name="Sprite2D" type="Sprite2D" parent="sleeper3"]
+z_index = -1
+position = Vector2(206, 208.00002)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_da0xt")
+
+[node name="Path2D2" type="Path2D" parent="."]
+curve = SubResource("Curve2D_rdemi")
+
+[node name="sleeping cat" parent="Path2D2" instance=ExtResource("8_rdemi")]
+z_index = -2
+position = Vector2(230, 213)
+timeline = "cat_timeline"
+idle_animation = "sleeping"
+moving_animation = "sleeping_noticket"
