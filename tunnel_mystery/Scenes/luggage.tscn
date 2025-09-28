@@ -1,12 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://ruk7mt44gy70"]
+[gd_scene load_steps=8 format=3 uid="uid://ruk7mt44gy70"]
 
 [ext_resource type="PackedScene" uid="uid://cml8ag50tpsmv" path="res://Scenes/main.tscn" id="1_n4s8n"]
 [ext_resource type="Script" uid="uid://bog1v2e07eucc" path="res://Scenes/luggage.gd" id="2_bdxgq"]
 [ext_resource type="Texture2D" uid="uid://cm4fded8g1ssc" path="res://Sprites/LuggageCar.png" id="2_rvwm1"]
-[ext_resource type="PackedScene" uid="uid://5h4m60uytdbd" path="res://Scenes/NPCs/moving_mole.tscn" id="3_bdxgq"]
-[ext_resource type="Script" uid="uid://bvjvmvo8dmvq0" path="res://Scenes/NPCs/fc_mole.gd" id="4_b3ov1"]
+[ext_resource type="PackedScene" uid="uid://c2ceep68gfc7" path="res://Scenes/Objects/bag.tscn" id="3_rvwm1"]
+[ext_resource type="PackedScene" uid="uid://5h4m60uytdbd" path="res://Scenes/NPCs/moving_mole.tscn" id="5_qt5sr"]
+[ext_resource type="Script" uid="uid://bvjvmvo8dmvq0" path="res://Scenes/NPCs/fc_mole.gd" id="6_qgt8l"]
 
-[sub_resource type="Curve2D" id="Curve2D_qt5sr"]
+[sub_resource type="Curve2D" id="Curve2D_p63ud"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 1254, 401, 0, 0, 0, 0, -101, 401)
 }
@@ -27,16 +28,6 @@ next_side = 2
 
 [node name="TextureRect" parent="." index="7"]
 texture = ExtResource("2_rvwm1")
-
-[node name="Path2D" type="Path2D" parent="." index="13"]
-position = Vector2(-3, 119)
-curve = SubResource("Curve2D_qt5sr")
-
-[node name="MovingInteractable" parent="Path2D" index="0" instance=ExtResource("3_bdxgq")]
-position = Vector2(1254, 401)
-rotates = false
-loop = false
-script = ExtResource("4_b3ov1")
 
 [node name="Interactable" parent="." index="13" instance=ExtResource("3_rvwm1")]
 position = Vector2(-249, 227)
@@ -98,6 +89,16 @@ text = "Sir. Atwood              Jerry                Gunther         Esmeralda 
 
 [node name="Node2D2" type="Node2D" parent="." index="24"]
 script = ExtResource("2_bdxgq")
+
+[node name="Path2D" type="Path2D" parent="." index="25"]
+position = Vector2(-4, 106)
+curve = SubResource("Curve2D_p63ud")
+
+[node name="MovingInteractable" parent="Path2D" index="0" instance=ExtResource("5_qt5sr")]
+position = Vector2(1254, 401)
+rotates = false
+loop = false
+script = ExtResource("6_qgt8l")
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="ready" from="Interactable" to="Interactable" method="_on_ready"]

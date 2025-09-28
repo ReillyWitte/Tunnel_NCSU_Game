@@ -94,12 +94,9 @@ position = Vector2(14, -15)
 curve = SubResource("Curve2D_ld8vk")
 
 [node name="MovingInteractable" parent="Path2D" index="0" instance=ExtResource("4_wdu0v")]
-z_index = -1
 position = Vector2(366, 367)
 rotates = false
 loop = false
-timeline = "mole_timeline"
-speed = 1.5
 
 [node name="StaticBody2D10" type="StaticBody2D" parent="." index="17"]
 

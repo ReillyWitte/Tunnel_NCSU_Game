@@ -10,12 +10,22 @@
 "style": "mole",
 "suffix": ""
 },
-&"default_portrait": "",
+&"default_portrait": "New portrait",
 &"description": "",
 &"display_name": "Earnest",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
-&"portraits": {},
+&"portraits": {
+"New portrait": {
+"export_overrides": {
+"image": "\"res://Sprites/Dialogue/Ernest (1).png\""
+},
+"mirror": true,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://addons/dialogic/Modules/Character/default_portrait.tscn"
+}
+},
 &"scale": 1.0
 }

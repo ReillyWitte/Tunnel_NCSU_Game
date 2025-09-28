@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Tunnel_Mystery"
-run/main_scene="uid://cml8ag50tpsmv"
+run/main_scene="uid://ts8qlbvwjy2r"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -53,6 +53,7 @@ directories/dtl_directory={
 "dog_timeline": "res://DialogStuff/dog_timeline.dtl",
 "eagle_timeline": "res://DialogStuff/eagle_timeline.dtl",
 "frog_timeline": "res://DialogStuff/frog_timeline.dtl",
+"game_over": "res://game_over.dtl",
 "goat_timeline": "res://DialogStuff/goat_timeline.dtl",
 "herring_timeline": "res://DialogStuff/herring_timeline.dtl",
 "lion_timeline": "res://DialogStuff/lion_timeline.dtl",
@@ -65,7 +66,7 @@ directories/dtl_directory={
 "timeline": "res://DialogStuff/timeline.dtl"
 }
 layout/style_directory={
-"": "res://DialogStuff/Characters/custom_style.tres",
+"": "res://game_over.tres",
 "alligator": "res://DialogStuff/Characters/alligator.tres",
 "bat": "res://DialogStuff/Characters/bat.tres",
 "cat": "res://DialogStuff/Characters/cat.tres",
@@ -73,6 +74,7 @@ layout/style_directory={
 "dog": "res://DialogStuff/Characters/dog.tres",
 "eagle": "res://DialogStuff/Characters/eagle.tres",
 "frog": "res://DialogStuff/Characters/frog.tres",
+"game_over": "res://game_over.tres",
 "goat": "res://DialogStuff/Characters/goat.tres",
 "herring": "res://DialogStuff/Characters/herring.tres",
 "lion": "res://DialogStuff/Characters/custom_style.tres",
@@ -83,10 +85,12 @@ layout/style_directory={
 "rhino": "res://DialogStuff/Characters/rhino.tres",
 "the_agency": "res://DialogStuff/Characters/the_agency.tres"
 }
-layout/style_list=["res://DialogStuff/Characters/custom_style.tres", "res://DialogStuff/Characters/eagle.tres", "res://DialogStuff/Characters/mole.tres", "res://DialogStuff/Characters/alligator.tres", "res://DialogStuff/Characters/frog.tres", "res://DialogStuff/Characters/penguin.tres", "res://DialogStuff/Characters/goat.tres", "res://DialogStuff/Characters/herring.tres", "res://DialogStuff/Characters/bat.tres", "res://DialogStuff/Characters/otter.tres", "res://DialogStuff/Characters/cow.tres", "res://DialogStuff/Characters/cat.tres", "res://DialogStuff/Characters/rhino.tres", "res://DialogStuff/Characters/narrator.tres", "res://DialogStuff/Characters/the_agency.tres", "res://DialogStuff/Characters/dog.tres"]
-layout/default_style="res://DialogStuff/Characters/custom_style.tres"
+layout/style_list=["res://DialogStuff/Characters/custom_style.tres", "res://DialogStuff/Characters/eagle.tres", "res://DialogStuff/Characters/mole.tres", "res://DialogStuff/Characters/alligator.tres", "res://DialogStuff/Characters/frog.tres", "res://DialogStuff/Characters/penguin.tres", "res://DialogStuff/Characters/goat.tres", "res://DialogStuff/Characters/herring.tres", "res://DialogStuff/Characters/bat.tres", "res://DialogStuff/Characters/otter.tres", "res://DialogStuff/Characters/cow.tres", "res://DialogStuff/Characters/cat.tres", "res://DialogStuff/Characters/rhino.tres", "res://DialogStuff/Characters/narrator.tres", "res://DialogStuff/Characters/the_agency.tres", "res://DialogStuff/Characters/dog.tres", "res://game_over.tres"]
+layout/default_style="res://game_over.tres"
 glossary/default_case_sensitive=true
-variables={}
+variables={
+"win_condition": "\"\""
+}
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
@@ -126,6 +130,11 @@ audio/channel_defaults={
 "volume": 0.0
 }
 }
+
+[display]
+
+window/size/mode=3
+window/stretch/mode="canvas_items"
 
 [editor]
 

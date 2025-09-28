@@ -176,10 +176,12 @@ texture = ExtResource("4_cu6jp")
 [node name="Eagle" parent="." index="24" instance=ExtResource("5_cu6jp")]
 z_index = -2
 position = Vector2(-376, -22)
+timeline = "eagle_timeline"
 
 [node name="Lion" parent="." index="25" instance=ExtResource("6_041ke")]
 z_index = -2
 position = Vector2(276, -12)
+timeline = "lion_timeline"
 
 [node name="Path2D" type="Path2D" parent="." index="27"]
 curve = SubResource("Curve2D_kh21p")
@@ -189,5 +191,3 @@ position = Vector2(1254, 401)
 rotates = false
 loop = false
 script = ExtResource("8_o2l57")
-timeline = "mole_timeline"
-speed = 3.0

@@ -1,0 +1,9 @@
+[background arg="res://Other Assets/black.png" fade="0.0"]
+[wait time="2.0"]
+the_agency: You've run out of time. Who do you think it is?
+[text_input text="Suspects: Senator Freedom, Sir Reginald Atwood, Ernest, Jerry, Gunther, Spencer, Esmerelda, Herrington, Angelina, Oswald, Meredith, Susan, Ricky, Dr. Ehrbudd" var="win_condition"]
+if {win_condition} == "Sir Reginald Atwood":
+	the_agency: Good job Agent. You've saved the train.
+else:
+	the_agency: Oh great... YOU LOST!!! GAME OVER.
+	join  center

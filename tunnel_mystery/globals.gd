@@ -45,6 +45,7 @@ var goat_interrogate = 0
 var rhino_nice = 0
 var mole_smoke = 0
 var mole_room = ""
+var win_condition = ""
 
 # Mole walking function
 func _process(delta):
@@ -53,5 +54,7 @@ func _process(delta):
 			
 	if ((float(Globals.time_remaining) / Globals.total_time) == .25):
 			Globals.mole_smoke = 2
-	
+	if ((float(Globals.time_remaining) / Globals.total_time) == 0):
+		var dialog_node = Dialogic.start("game_over")
+		
 var luggage_labels = 0
