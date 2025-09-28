@@ -21,7 +21,6 @@ Globals="*res://globals.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 trainsounds="*res://Scenes/AudioManager.tscn"
 GlobalTimer="*res://Scenes/timer.gd"
-AudioManager="*res://Scenes/AudioManager.tscn"
 
 [dialogic]
 

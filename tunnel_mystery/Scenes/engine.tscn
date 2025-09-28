@@ -24,6 +24,10 @@ b = Vector2(580, 5)
 size = Vector2(195.5, 297)
 
 [sub_resource type="Curve2D" id="Curve2D_ld8vk"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 366, 367, 0, 0, 0, 0, 368, 367, 0, 0, 0, 0, 345, 472, 0, 0, 0, 0, -106, 469)
+}
+point_count = 4
 
 [node name="Main" instance=ExtResource("1_ckq7p")]
 
@@ -34,8 +38,12 @@ position = Vector2(-713, 164)
 visible = false
 
 [node name="Door2" parent="." index="5"]
+z_index = -1
 next_car = "res://Scenes/first_class.tscn"
 next_side = 2
+
+[node name="Node2D" parent="." index="6"]
+position = Vector2(182, 292)
 
 [node name="TextureRect" parent="." index="7"]
 texture = ExtResource("2_y0ab4")
@@ -73,12 +81,16 @@ position = Vector2(452, 250)
 shape = SubResource("RectangleShape2D_apa4b")
 
 [node name="Path2D" type="Path2D" parent="." index="16"]
+position = Vector2(14, -15)
 curve = SubResource("Curve2D_ld8vk")
 
 [node name="MovingInteractable" parent="Path2D" index="0" instance=ExtResource("4_wdu0v")]
 z_index = -1
-position = Vector2(340, 348)
+position = Vector2(366, 367)
+rotates = false
+loop = false
 timeline = "mole_timeline"
+speed = 1.5
 
 [node name="StaticBody2D10" type="StaticBody2D" parent="." index="17"]
 

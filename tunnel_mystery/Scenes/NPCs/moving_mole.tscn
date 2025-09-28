@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://5h4m60uytdbd"]
 
-[ext_resource type="Script" uid="uid://csj4iok15g166" path="res://Scenes/moving_interactable.gd" id="1_uysem"]
-[ext_resource type="Script" uid="uid://di43f5jskc8an" path="res://Scenes/static_body_2d.gd" id="2_rvcvc"]
+[ext_resource type="Script" uid="uid://o3ilgqau8ndb" path="res://Scenes/NPCs/moving mole.gd" id="1_cb4vv"]
+[ext_resource type="Script" uid="uid://5a6cytjve081" path="res://Scenes/NPCs/mole_smoke.gd" id="2_bhdim"]
 [ext_resource type="Texture2D" uid="uid://c8q4o6ataeqf6" path="res://Sprites/MoleShovel1.png" id="3_cb4vv"]
 [ext_resource type="Texture2D" uid="uid://nj7p7uxbcqh5" path="res://Sprites/MoleShovel2.png" id="4_bhdim"]
 [ext_resource type="Texture2D" uid="uid://tvsdy08iphb4" path="res://Sprites/MoleWalk1.png" id="4_eafns"]
@@ -28,7 +28,7 @@ animations = [{
 "texture": ExtResource("5_cb4vv")
 }],
 "loop": true,
-"name": &"walk",
+"name": &"walking",
 "speed": 5.0
 }]
 
@@ -36,20 +36,19 @@ animations = [{
 size = Vector2(84, 119)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_debwt"]
-size = Vector2(127, 197.25)
+size = Vector2(212.5, 236.625)
 
 [node name="MovingInteractable" type="PathFollow2D"]
-script = ExtResource("1_uysem")
+script = ExtResource("1_cb4vv")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-script = ExtResource("2_rvcvc")
+script = ExtResource("2_bhdim")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
 scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_exoap")
-animation = &"idle"
+animation = &"walking"
 autoplay = "idle"
-frame_progress = 0.4857725
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-4, 12)
@@ -58,5 +57,5 @@ shape = SubResource("RectangleShape2D_eafns")
 [node name="Area2D" type="Area2D" parent="StaticBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Area2D"]
-position = Vector2(-33, 22)
+position = Vector2(9.75, 41.6875)
 shape = SubResource("RectangleShape2D_debwt")
