@@ -10,3 +10,39 @@ if Globals.frog_dialog == 0.0:
 		Gunther: I actually got into a fight with that goat lady earlier about him. She just doesn't understand.
 	- Nothing. Sorry to disrupt your game.
 		Gunther: Ah, don't worry about it.
+	- What kind of info can I get for this coin? | [if Globals.coin == 1.0] [else="hide"]
+		Gunther: Ha! It isn't worth much, but a man like you might find something like this handy.
+		narrator: The frog holds up a rusty set of lockpicking tools. You think they may be good for one more use.
+		Gunther: They're all yours if you give me that coin....
+		[wait time="0.5"]
+		Gunther: And you answer my questions three. You in?
+		- Yes
+			narrator: Gunther excitedly grabs your coin.
+			set {Globals.coin} = 1.0
+			Gunther: Goodluck!
+			Gunther: What are frogs known for eating?
+			- Flies
+				Gunther: Correct!
+				Gunther: What's a baby frog called?
+				- Minnow
+					Gunther: Wrong. Sorry, you lose.
+				- Tadpole
+					Gunther: Correct!
+					Gunther: Final question.... Who is the best card player in the whole world?
+					- Jerry
+						Gunther: What are you dumb!? Jerry sucks at cards. You lose!
+					- Gunther
+						Gunther: DING DING DING! We have a winner.
+						Gunther: Here's the lockpick! Maybe you can rummage around in peoples' luggage. I bet moneybags oil baron Atwood has some swanky stuff.
+						set {Globals.lockpick} += 1.0
+						narrator: Gunther hands you the lockpicking set.
+					- Daniel Negreanu
+						Gunther: WRONG!!! That guy has nothing on me. Sorry, you lose.
+				- Larvae
+					Gunther: Wrong. Sorry, you lose.
+			- Hotdogs
+				Gunther: Wrong. Sorry, you lose.
+			- Hamburgers
+				Gunther: Wrong. Sorry, you lose.
+		- No
+			Gunther: Your loss!

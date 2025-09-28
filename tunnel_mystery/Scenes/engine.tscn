@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://brhbwbi8qjp3p"]
+[gd_scene load_steps=14 format=3 uid="uid://brhbwbi8qjp3p"]
 
 [ext_resource type="PackedScene" uid="uid://cml8ag50tpsmv" path="res://Scenes/main.tscn" id="1_ckq7p"]
 [ext_resource type="Texture2D" uid="uid://bp2kvmjg4pw7" path="res://Sprites/Loco2.png" id="2_y0ab4"]
@@ -14,7 +14,10 @@ a = Vector2(671, 287)
 b = Vector2(342, 178)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ld8vk"]
-size = Vector2(99, 190)
+size = Vector2(107.5, 222)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_68yqp"]
+size = Vector2(68.5, 191.5)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ckq7p"]
 a = Vector2(578, 473)
@@ -24,6 +27,10 @@ b = Vector2(580, 5)
 size = Vector2(195.5, 297)
 
 [sub_resource type="Curve2D" id="Curve2D_ld8vk"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 366, 367, 0, 0, 0, 0, 368, 367, 0, 0, 0, 0, 345, 472, 0, 0, 0, 0, -106, 469)
+}
+point_count = 4
 
 [node name="Main" instance=ExtResource("1_ckq7p")]
 
@@ -34,8 +41,12 @@ position = Vector2(-713, 164)
 visible = false
 
 [node name="Door2" parent="." index="5"]
+z_index = -1
 next_car = "res://Scenes/first_class.tscn"
 next_side = 2
+
+[node name="Node2D" parent="." index="6"]
+position = Vector2(182, 292)
 
 [node name="TextureRect" parent="." index="7"]
 texture = ExtResource("2_y0ab4")
@@ -49,10 +60,16 @@ shape = SubResource("SegmentShape2D_5oc0h")
 [node name="StaticBody2D7" type="StaticBody2D" parent="." index="13"]
 position = Vector2(-102, 81)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7" index="0"]
-position = Vector2(673, 450)
+[node name="Area2D" type="Area2D" parent="StaticBody2D7" index="0"]
+
+[node name="Interact_Zone" type="CollisionShape2D" parent="StaticBody2D7/Area2D" index="0"]
+position = Vector2(668.75, 449)
 shape = SubResource("RectangleShape2D_ld8vk")
 script = ExtResource("3_apa4b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7" index="1"]
+position = Vector2(670.25, 450.75)
+shape = SubResource("RectangleShape2D_68yqp")
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="." index="14"]
 
@@ -73,12 +90,16 @@ position = Vector2(452, 250)
 shape = SubResource("RectangleShape2D_apa4b")
 
 [node name="Path2D" type="Path2D" parent="." index="16"]
+position = Vector2(14, -15)
 curve = SubResource("Curve2D_ld8vk")
 
 [node name="MovingInteractable" parent="Path2D" index="0" instance=ExtResource("4_wdu0v")]
 z_index = -1
-position = Vector2(340, 348)
+position = Vector2(366, 367)
+rotates = false
+loop = false
 timeline = "mole_timeline"
+speed = 1.5
 
 [node name="StaticBody2D10" type="StaticBody2D" parent="." index="17"]
 
@@ -91,3 +112,6 @@ texture = ExtResource("5_wdu0v")
 [node name="Interactable" parent="." index="18" instance=ExtResource("7_ld8vk")]
 position = Vector2(338, 161)
 timeline = "otter_timeline"
+
+[connection signal="body_entered" from="StaticBody2D7/Area2D" to="StaticBody2D7/Area2D/Interact_Zone" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="StaticBody2D7/Area2D" to="StaticBody2D7/Area2D/Interact_Zone" method="_on_area_2d_body_exited"]

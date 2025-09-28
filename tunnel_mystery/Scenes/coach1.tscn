@@ -25,6 +25,9 @@ size = Vector2(85.5, 95.5)
 
 [node name="Main" instance=ExtResource("1_ndwjx")]
 
+[node name="CollisionShape2D" parent="StaticBody2D2" index="0"]
+position = Vector2(-611, 168)
+
 [node name="Door" parent="." index="4"]
 next_car = "res://Scenes/first_class.tscn"
 next_side = 1
@@ -32,6 +35,9 @@ next_side = 1
 [node name="Door2" parent="." index="5"]
 next_car = "res://Scenes/coach2.tscn"
 next_side = 2
+
+[node name="Node2D" parent="." index="6"]
+position = Vector2(415, 386)
 
 [node name="TextureRect" parent="." index="7"]
 offset_left = 2.0
