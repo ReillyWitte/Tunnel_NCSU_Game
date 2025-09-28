@@ -36,3 +36,4 @@ var game_start = 0
 var bat_wake = 0
 var goat_interrogate = 0
 var rhino_nice = 0
+var mole_smoke = 0

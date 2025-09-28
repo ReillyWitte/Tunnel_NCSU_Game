@@ -6,8 +6,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pmsje"]
 size = Vector2(77.25, 113)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_8s6bd"]
-radius = 100.08
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qgxi7"]
+size = Vector2(113, 235.5)
 
 [node name="Interactable" type="StaticBody2D"]
 script = ExtResource("1_m0ttr")
@@ -24,8 +24,8 @@ shape = SubResource("RectangleShape2D_pmsje")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(634, 309)
-shape = SubResource("CircleShape2D_8s6bd")
+position = Vector2(618, 340.25)
+shape = SubResource("RectangleShape2D_qgxi7")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
