@@ -14,20 +14,29 @@ size = Vector2(81.5, 135)
 
 [node name="Main" instance=ExtResource("1_p2scx")]
 
-[node name="Door" parent="." index="4"]
+[node name="FadeTransitionManager" type="ColorRect" parent="." index="0"]
+z_index = 70
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("5_xiufw")
+next_scene = ExtResource("6_atycd")
+metadata/_custom_type_script = "uid://c6215vuol8ms2"
+
+[node name="Door" parent="." index="5"]
 position = Vector2(1113, 370)
 next_side = 1
 
-[node name="Door2" parent="." index="5"]
+[node name="Door2" parent="." index="6"]
 position = Vector2(47, 370)
 next_car = "res://Scenes/sleeper.tscn"
 next_side = 2
 
-[node name="TextureRect" parent="." index="7"]
+[node name="TextureRect" parent="." index="8"]
 offset_left = 4.000004
 offset_right = 4.000004
 
-[node name="Chair1" type="StaticBody2D" parent="." index="9"]
+[node name="Chair1" type="StaticBody2D" parent="." index="10"]
 position = Vector2(-10, -5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair1" index="0"]
@@ -40,7 +49,7 @@ position = Vector2(152, 615)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair2" type="StaticBody2D" parent="." index="10"]
+[node name="Chair2" type="StaticBody2D" parent="." index="11"]
 z_index = -170
 position = Vector2(-11, -292)
 
@@ -54,7 +63,7 @@ position = Vector2(152, 615)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair3" type="StaticBody2D" parent="." index="11"]
+[node name="Chair3" type="StaticBody2D" parent="." index="12"]
 z_index = -170
 position = Vector2(266, -295)
 
@@ -68,7 +77,7 @@ position = Vector2(152, 615)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair4" type="StaticBody2D" parent="." index="12"]
+[node name="Chair4" type="StaticBody2D" parent="." index="13"]
 position = Vector2(266, -6)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair4" index="0"]
@@ -81,7 +90,7 @@ position = Vector2(152, 615)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair5" type="StaticBody2D" parent="." index="13"]
+[node name="Chair5" type="StaticBody2D" parent="." index="14"]
 z_index = -170
 position = Vector2(543, -295)
 
@@ -95,7 +104,7 @@ position = Vector2(152, 615)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair6" type="StaticBody2D" parent="." index="14"]
+[node name="Chair6" type="StaticBody2D" parent="." index="15"]
 position = Vector2(543, -5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair6" index="0"]
@@ -108,7 +117,7 @@ position = Vector2(152, 615)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair7" type="StaticBody2D" parent="." index="15"]
+[node name="Chair7" type="StaticBody2D" parent="." index="16"]
 z_index = -170
 position = Vector2(809, -295)
 
@@ -122,7 +131,7 @@ position = Vector2(152, 615)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair8" type="StaticBody2D" parent="." index="16"]
+[node name="Chair8" type="StaticBody2D" parent="." index="17"]
 position = Vector2(809, -5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair8" index="0"]
@@ -134,14 +143,6 @@ texture = ExtResource("2_1hbbv")
 position = Vector2(152, 615)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("RectangleShape2D_yipkt")
-
-[node name="FadeTransitionManager" type="ColorRect" parent="." index="17"]
-offset_right = 40.0
-offset_bottom = 40.0
-color = Color(0, 0, 0, 1)
-script = ExtResource("5_xiufw")
-next_scene = ExtResource("6_atycd")
-metadata/_custom_type_script = "uid://c6215vuol8ms2"
 
 [node name="Herring" parent="." index="18" instance=ExtResource("7_atycd")]
 z_index = -100

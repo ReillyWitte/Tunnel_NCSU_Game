@@ -67,6 +67,7 @@ layout/style_directory={
 "bat": "res://DialogStuff/Characters/bat.tres",
 "cat": "res://DialogStuff/Characters/cat.tres",
 "cow": "res://DialogStuff/Characters/cow.tres",
+"dog": "res://DialogStuff/Characters/dog.tres",
 "eagle": "res://DialogStuff/Characters/eagle.tres",
 "frog": "res://DialogStuff/Characters/frog.tres",
 "goat": "res://DialogStuff/Characters/goat.tres",
@@ -79,7 +80,7 @@ layout/style_directory={
 "rhino": "res://DialogStuff/Characters/rhino.tres",
 "the_agency": "res://DialogStuff/Characters/the_agency.tres"
 }
-layout/style_list=["res://DialogStuff/Characters/custom_style.tres", "res://DialogStuff/Characters/eagle.tres", "res://DialogStuff/Characters/mole.tres", "res://DialogStuff/Characters/alligator.tres", "res://DialogStuff/Characters/frog.tres", "res://DialogStuff/Characters/penguin.tres", "res://DialogStuff/Characters/goat.tres", "res://DialogStuff/Characters/herring.tres", "res://DialogStuff/Characters/bat.tres", "res://DialogStuff/Characters/otter.tres", "res://DialogStuff/Characters/cow.tres", "res://DialogStuff/Characters/cat.tres", "res://DialogStuff/Characters/rhino.tres", "res://DialogStuff/Characters/narrator.tres", "res://DialogStuff/Characters/the_agency.tres"]
+layout/style_list=["res://DialogStuff/Characters/custom_style.tres", "res://DialogStuff/Characters/eagle.tres", "res://DialogStuff/Characters/mole.tres", "res://DialogStuff/Characters/alligator.tres", "res://DialogStuff/Characters/frog.tres", "res://DialogStuff/Characters/penguin.tres", "res://DialogStuff/Characters/goat.tres", "res://DialogStuff/Characters/herring.tres", "res://DialogStuff/Characters/bat.tres", "res://DialogStuff/Characters/otter.tres", "res://DialogStuff/Characters/cow.tres", "res://DialogStuff/Characters/cat.tres", "res://DialogStuff/Characters/rhino.tres", "res://DialogStuff/Characters/narrator.tres", "res://DialogStuff/Characters/the_agency.tres", "res://DialogStuff/Characters/dog.tres"]
 layout/default_style="res://DialogStuff/Characters/custom_style.tres"
 glossary/default_case_sensitive=true
 variables={}

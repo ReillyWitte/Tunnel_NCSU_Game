@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ts8qlbvwjy2r"]
+[gd_scene load_steps=12 format=3 uid="uid://ts8qlbvwjy2r"]
 
 [ext_resource type="PackedScene" uid="uid://cml8ag50tpsmv" path="res://Scenes/main.tscn" id="1_ndwjx"]
 [ext_resource type="Texture2D" uid="uid://dxihhccj250qo" path="res://Sprites/Chair.png" id="3_tqt02"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://djka28ynht0be" path="res://Sprites/Croppedcabin2.png" id="4_w40gk"]
 [ext_resource type="PackedScene" uid="uid://c0jn688lpdb4b" path="res://Scenes/NPCs/goat.tscn" id="5_2lnuo"]
 [ext_resource type="PackedScene" uid="uid://bmu8wlits5ww7" path="res://addons/sudden_fade_plugin/demo/room2.tscn" id="7_snxeu"]
-[ext_resource type="AudioStream" uid="uid://d23vyu0vdblfw" path="res://Audio Files/metaldoor.mp3" id="7_w40gk"]
 [ext_resource type="Script" uid="uid://c6215vuol8ms2" path="res://addons/sudden_fade_plugin/fade_transition_manager.gd" id="7_xo6ao"]
 [ext_resource type="Texture2D" uid="uid://cvd3nlgpnxx8s" path="res://Sprites/background full.png" id="9_2lnuo"]
 [ext_resource type="Script" uid="uid://bmshojjv0bi2r" path="res://Scenes/tunnel.gd" id="10_w40gk"]
@@ -17,32 +16,22 @@ size = Vector2(81.5, 135)
 
 [node name="Main" instance=ExtResource("1_ndwjx")]
 
-[node name="FadeLayer#FadeTransitionManager" type="ColorRect" parent="." index="1"]
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("7_xo6ao")
-metadata/_custom_type_script = "uid://c6215vuol8ms2"
-
-[node name="Door" parent="." index="5"]
+[node name="Door" parent="." index="4"]
 position = Vector2(1113, 370)
 next_car = ""
 
-[node name="Door2" parent="." index="6"]
+[node name="Door2" parent="." index="5"]
 position = Vector2(47, 370)
 next_car = "res://Scenes/coach2.tscn"
 next_side = 2
 
-[node name="Alligator" parent="." index="7" instance=ExtResource("4_2lnuo")]
-position = Vector2(-452, -37)
-timeline = "alligator_timeline"
-
-[node name="TextureRect" parent="." index="9"]
+[node name="TextureRect" parent="." index="7"]
 offset_left = 2.0
 offset_top = -3.0
 offset_right = 2.0
 offset_bottom = -3.0
 
-[node name="Chair1" type="StaticBody2D" parent="." index="11"]
+[node name="Chair1" type="StaticBody2D" parent="." index="9"]
 position = Vector2(-10, -5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair1" index="0"]
@@ -55,7 +44,7 @@ position = Vector2(152, 615)
 scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair2" type="StaticBody2D" parent="." index="12"]
+[node name="Chair2" type="StaticBody2D" parent="." index="10"]
 z_index = -170
 position = Vector2(-11, -292)
 
@@ -69,7 +58,7 @@ position = Vector2(152, 615)
 scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair3" type="StaticBody2D" parent="." index="13"]
+[node name="Chair3" type="StaticBody2D" parent="." index="11"]
 z_index = -170
 position = Vector2(266, -295)
 
@@ -83,7 +72,7 @@ position = Vector2(152, 615)
 scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair4" type="StaticBody2D" parent="." index="14"]
+[node name="Chair4" type="StaticBody2D" parent="." index="12"]
 position = Vector2(266, -6)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair4" index="0"]
@@ -96,7 +85,7 @@ position = Vector2(152, 615)
 scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair5" type="StaticBody2D" parent="." index="15"]
+[node name="Chair5" type="StaticBody2D" parent="." index="13"]
 z_index = -170
 position = Vector2(543, -295)
 
@@ -110,7 +99,7 @@ position = Vector2(152, 615)
 scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair6" type="StaticBody2D" parent="." index="16"]
+[node name="Chair6" type="StaticBody2D" parent="." index="14"]
 position = Vector2(543, -5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair6" index="0"]
@@ -123,7 +112,7 @@ position = Vector2(152, 615)
 scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair7" type="StaticBody2D" parent="." index="17"]
+[node name="Chair7" type="StaticBody2D" parent="." index="15"]
 z_index = -170
 position = Vector2(809, -295)
 
@@ -137,7 +126,7 @@ position = Vector2(152, 615)
 scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair8" type="StaticBody2D" parent="." index="18"]
+[node name="Chair8" type="StaticBody2D" parent="." index="16"]
 position = Vector2(809, -5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair8" index="0"]
@@ -150,28 +139,19 @@ position = Vector2(152, 615)
 scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Goat" parent="." index="19" instance=ExtResource("5_2lnuo")]
+[node name="Alligator" parent="." index="17" instance=ExtResource("4_2lnuo")]
+position = Vector2(-452, -37)
+timeline = "alligator_timeline"
+
+[node name="Goat" parent="." index="18" instance=ExtResource("5_2lnuo")]
 position = Vector2(82, 266)
 timeline = "goat_timeline"
 
-[node name="Rhino" parent="." index="20" instance=ExtResource("11_sl753")]
+[node name="Rhino" parent="." index="19" instance=ExtResource("11_sl753")]
 position = Vector2(439, 127)
 timeline = "rhino_timeline"
 
-[node name="FadeTransitionManager" type="ColorRect" parent="." index="21"]
-offset_left = 1.0
-offset_top = -36.0
-offset_right = 41.0
-offset_bottom = 4.0
-color = Color(0, 0, 0, 1)
-script = ExtResource("7_xo6ao")
-next_scene = ExtResource("7_snxeu")
-metadata/_custom_type_script = "uid://c6215vuol8ms2"
-
-[node name="doorsound" type="AudioStreamPlayer" parent="FadeTransitionManager" index="0"]
-stream = ExtResource("7_w40gk")
-
-[node name="tunnel" type="ParallaxBackground" parent="." index="22"]
+[node name="tunnel" type="ParallaxBackground" parent="." index="20"]
 layer = -10000
 scale = Vector2(0.5, 0.5)
 transform = Transform2D(0.5, 0, 0, 0.5, 0, 0)
@@ -192,7 +172,7 @@ position = Vector2(1122.7053, 502.41547)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("9_2lnuo")
 
-[node name="TextureRect2" type="TextureRect" parent="." index="24"]
+[node name="TextureRect2" type="TextureRect" parent="." index="22"]
 show_behind_parent = true
 z_index = -1000
 anchors_preset = 15
@@ -208,3 +188,12 @@ scale = Vector2(0.57, 0.57)
 texture = ExtResource("4_w40gk")
 expand_mode = 2
 stretch_mode = 2
+
+[node name="FadeTransitionManager2" type="ColorRect" parent="." index="23"]
+z_index = 70
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("7_xo6ao")
+next_scene = ExtResource("7_snxeu")
+metadata/_custom_type_script = "uid://c6215vuol8ms2"

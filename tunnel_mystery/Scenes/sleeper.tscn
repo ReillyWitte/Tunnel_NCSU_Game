@@ -1,7 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://cn6hqj6hyqxv3"]
+[gd_scene load_steps=17 format=3 uid="uid://cn6hqj6hyqxv3"]
 
 [ext_resource type="PackedScene" uid="uid://jdgmgd2i5rws" path="res://Scenes/door.tscn" id="1_dnfrm"]
+[ext_resource type="Script" uid="uid://c6215vuol8ms2" path="res://addons/sudden_fade_plugin/fade_transition_manager.gd" id="1_x30x7"]
 [ext_resource type="PackedScene" uid="uid://yegohmvxjpig" path="res://Scenes/player.tscn" id="2_b1msp"]
+[ext_resource type="PackedScene" uid="uid://bmu8wlits5ww7" path="res://addons/sudden_fade_plugin/demo/room2.tscn" id="2_c3ft4"]
 [ext_resource type="Texture2D" uid="uid://djka28ynht0be" path="res://Sprites/Croppedcabin2.png" id="3_da0xt"]
 [ext_resource type="AudioStream" uid="uid://d23vyu0vdblfw" path="res://Audio Files/metaldoor.mp3" id="4_d0guu"]
 [ext_resource type="PackedScene" uid="uid://pqcs84wu2sxs" path="res://Scenes/NPCs/moving_bat.tscn" id="5_d0guu"]
@@ -31,6 +33,15 @@ point_count = 2
 [sub_resource type="Curve2D" id="Curve2D_rdemi"]
 
 [node name="Main" type="Node2D"]
+
+[node name="FadeTransitionManager" type="ColorRect" parent="."]
+z_index = 70
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_x30x7")
+next_scene = ExtResource("2_c3ft4")
+metadata/_custom_type_script = "uid://c6215vuol8ms2"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(1152, 648)
@@ -63,7 +74,7 @@ shape = SubResource("WorldBoundaryShape2D_1bvp3")
 [node name="Door" parent="." instance=ExtResource("1_dnfrm")]
 position = Vector2(1109, 346)
 scale = Vector2(0.5, 0.5)
-next_car = "res://Scenes/coach1.tscn"
+next_car = "res://Scenes/coach2.tscn"
 
 [node name="Door2" parent="." instance=ExtResource("1_dnfrm")]
 position = Vector2(37, 348)

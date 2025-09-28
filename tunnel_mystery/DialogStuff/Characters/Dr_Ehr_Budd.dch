@@ -10,12 +10,23 @@
 "style": "dog",
 "suffix": ""
 },
-&"default_portrait": "",
+&"default_portrait": "Neutral_Budd",
 &"description": "",
 &"display_name": "Dr. Ehr Budd",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
-&"portraits": {},
+&"portraits": {
+"Neutral_Budd": {
+"export_overrides": {
+"image": "\"res://Sprites/Dialogue/DrEhrbudd.png\""
+},
+"ignore_char_scale": false,
+"mirror": true,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
 &"scale": 1.0
 }
