@@ -1,0 +1,8 @@
+narrator: The bag is locked shut.
+if Globals.lockpick > 0.0:
+	narrator: Would you like to use a lockpick to open it?
+	- Yes
+		narrator: You wiggle the lock with your lockpicking supplies. The tools break, but not before the bag flies open.
+		set {Globals.lockpick} -= 1.0
+		narrator: Inside the briefcase is a neatly folded parachute. Why would someone need this?
+	- No

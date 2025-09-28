@@ -1,6 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://ruk7mt44gy70"]
 
 [ext_resource type="PackedScene" uid="uid://cml8ag50tpsmv" path="res://Scenes/main.tscn" id="1_n4s8n"]
+[ext_resource type="Script" uid="uid://bog1v2e07eucc" path="res://Scenes/luggage.gd" id="2_bdxgq"]
 [ext_resource type="Texture2D" uid="uid://cm4fded8g1ssc" path="res://Sprites/LuggageCar.png" id="2_rvwm1"]
 [ext_resource type="PackedScene" uid="uid://5h4m60uytdbd" path="res://Scenes/NPCs/moving_mole.tscn" id="3_bdxgq"]
 [ext_resource type="Script" uid="uid://bvjvmvo8dmvq0" path="res://Scenes/NPCs/fc_mole.gd" id="4_b3ov1"]
@@ -12,6 +13,7 @@ _data = {
 point_count = 2
 
 [node name="Main2" instance=ExtResource("1_n4s8n")]
+script = ExtResource("2_bdxgq")
 
 [node name="Door" parent="." index="4"]
 position = Vector2(1118, 450)
@@ -35,3 +37,68 @@ position = Vector2(1254, 401)
 rotates = false
 loop = false
 script = ExtResource("4_b3ov1")
+
+[node name="Interactable" parent="." index="13" instance=ExtResource("3_rvwm1")]
+position = Vector2(-249, 227)
+scale = Vector2(0.5, 0.5)
+timeline = "correct_luggage_timeline"
+
+[node name="Interactable5" parent="." index="14" instance=ExtResource("3_rvwm1")]
+position = Vector2(200, 225)
+scale = Vector2(0.5, 0.5)
+timeline = "luggage_timeline"
+
+[node name="Interactable6" parent="." index="15" instance=ExtResource("3_rvwm1")]
+position = Vector2(315, 223)
+scale = Vector2(0.5, 0.5)
+timeline = "luggage_timeline"
+
+[node name="Interactable7" parent="." index="16" instance=ExtResource("3_rvwm1")]
+position = Vector2(427, 221)
+scale = Vector2(0.5, 0.5)
+timeline = "luggage_timeline"
+
+[node name="Interactable8" parent="." index="17" instance=ExtResource("3_rvwm1")]
+position = Vector2(535, 220)
+scale = Vector2(0.5, 0.5)
+timeline = "luggage_timeline"
+
+[node name="Interactable9" parent="." index="18" instance=ExtResource("3_rvwm1")]
+position = Vector2(651, 221)
+scale = Vector2(0.5, 0.5)
+timeline = "luggage_timeline"
+
+[node name="Interactable10" parent="." index="19" instance=ExtResource("3_rvwm1")]
+position = Vector2(772, 220)
+scale = Vector2(0.5, 0.5)
+timeline = "luggage_timeline"
+
+[node name="Interactable2" parent="." index="20" instance=ExtResource("3_rvwm1")]
+position = Vector2(-136, 227)
+scale = Vector2(0.5, 0.5)
+timeline = "luggage_timeline"
+
+[node name="Interactable3" parent="." index="21" instance=ExtResource("3_rvwm1")]
+position = Vector2(-23, 226)
+scale = Vector2(0.5, 0.5)
+timeline = "luggage_timeline"
+
+[node name="Interactable4" parent="." index="22" instance=ExtResource("3_rvwm1")]
+position = Vector2(85, 227)
+scale = Vector2(0.5, 0.5)
+timeline = "luggage_timeline"
+
+[node name="Label" type="Label" parent="." index="23"]
+visible = false
+offset_left = 17.0
+offset_top = 233.0
+offset_right = 106.0
+offset_bottom = 256.0
+text = "Sir. Atwood              Jerry                Gunther         Esmeralda            Susan             Herrington          Ricky              Dr. Budd           Angelina              Earnest"
+
+[node name="Node2D2" type="Node2D" parent="." index="24"]
+script = ExtResource("2_bdxgq")
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="ready" from="Interactable" to="Interactable" method="_on_ready"]
+[connection signal="ready" from="Node2D2" to="." method="_on_node_2d_2_ready"]

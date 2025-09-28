@@ -29,6 +29,8 @@ var rhino_dialog = 0.0
 var dog_dialog = 0.0
 var frog_dialog = 0.0
 
+var luggage_dialog = 0.0
+
 # Item Flags
 var coin = 0
 var lockpick = 1
@@ -52,3 +54,4 @@ func _process(delta):
 	if ((float(Globals.time_remaining) / Globals.total_time) == .25):
 			Globals.mole_smoke = 2
 	
+var luggage_labels = 0

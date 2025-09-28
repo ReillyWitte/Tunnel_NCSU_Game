@@ -2,6 +2,6 @@
 [wait time="2.0"]
 the_agency (Test1): Good afternoon Detective Cawford.
 the_agency: The agency has gotten word regarding a dastardly plot. The very train you are currently riding is heading towards [i]The Serpent's Pass[/i], the longest tunnel in the world.
-the_agency: Soon after leaving the tunnel, the train is scheduled to pass over [i]The Queen's Bridge[/i]. However, we have received a tip that the bridge is lined with explosives, and someone on [b]your[/b] train plans to detonate them.
+the_agency: Soon after leaving the tunnel, the train is scheduled to pass over [i]The Queen's Bridge[/i]. However, we have received a tip that the bridge is lined with explosives, and someone on [b]your[/b] train plans to detonate them. We believe they are hoping to eliminate Senator Freedom in the attack.
 the_agency: Luckily, the depth of the tunnel will not allow the detonator signal to pass through. Meaning, the perpetrator can only trigger the explosives upon leaving the tunnnel.
-the_agency: Detective Cawford, your mission is to find and detain the criminal before this train exits the tunnel.
+the_agency: Detective Cawford, your mission is to find and detain the criminal before this train exits the tunnel. You are a equipped with a single lockpick if you need it.
