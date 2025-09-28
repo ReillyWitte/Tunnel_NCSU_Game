@@ -185,10 +185,9 @@ position = Vector2(276, -12)
 curve = SubResource("Curve2D_kh21p")
 
 [node name="MovingInteractable" parent="Path2D" index="0" instance=ExtResource("7_8oydd")]
-visible = false
 position = Vector2(1254, 401)
 rotates = false
 loop = false
 script = ExtResource("8_o2l57")
 timeline = "mole_timeline"
-speed = 1.5
+speed = 3.0

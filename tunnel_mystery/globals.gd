@@ -42,10 +42,13 @@ var bat_wake = 0
 var goat_interrogate = 0
 var rhino_nice = 0
 var mole_smoke = 0
-var mole_engine = 0
-var mole_first_class = 0
-var mole_coach1 = 0
-var mole_coach2 = 0
-var mole_dining = 0
-var mole_sleeper = 0
-var mole_luggage = 0
+var mole_room = ""
+
+# Mole walking function
+func _process(delta):
+	if ((float(Globals.time_remaining) / Globals.total_time) == .27):
+			Globals.mole_smoke = 1
+			
+	if ((float(Globals.time_remaining) / Globals.total_time) == .25):
+			Globals.mole_smoke = 2
+	

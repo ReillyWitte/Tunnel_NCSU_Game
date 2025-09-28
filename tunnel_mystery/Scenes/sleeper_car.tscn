@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://c371dfsgpurxx"]
+[gd_scene load_steps=11 format=3 uid="uid://c371dfsgpurxx"]
 
 [ext_resource type="PackedScene" uid="uid://cml8ag50tpsmv" path="res://Scenes/main.tscn" id="1_hb68l"]
 [ext_resource type="PackedScene" uid="uid://pqcs84wu2sxs" path="res://Scenes/NPCs/moving_bat.tscn" id="2_uknxr"]
 [ext_resource type="Texture2D" uid="uid://c7nfjxrx70hha" path="res://Sprites/SleepingBoothOpen.png" id="3_vqgpm"]
 [ext_resource type="Texture2D" uid="uid://cyt8s62ngs0hw" path="res://Sprites/SleepingBoothClosed.png" id="4_wcydk"]
 [ext_resource type="PackedScene" uid="uid://48mmcgia6sh5" path="res://Scenes/NPCs/sleeping_cat.tscn" id="5_qrgkm"]
+[ext_resource type="PackedScene" uid="uid://5h4m60uytdbd" path="res://Scenes/NPCs/moving_mole.tscn" id="6_vqgpm"]
+[ext_resource type="Script" uid="uid://bvjvmvo8dmvq0" path="res://Scenes/NPCs/fc_mole.gd" id="7_wcydk"]
 
 [sub_resource type="Curve2D" id="Curve2D_ekdvr"]
 _data = {
@@ -13,6 +15,12 @@ _data = {
 point_count = 2
 
 [sub_resource type="Curve2D" id="Curve2D_hki7d"]
+
+[sub_resource type="Curve2D" id="Curve2D_qrgkm"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1254, 401, 0, 0, 0, 0, -101, 401)
+}
+point_count = 2
 
 [node name="Main" instance=ExtResource("1_hb68l")]
 
@@ -85,3 +93,13 @@ position = Vector2(230, 213)
 timeline = "cat_timeline"
 idle_animation = "sleeping"
 moving_animation = "sleeping_noticket"
+
+[node name="Path2D3" type="Path2D" parent="." index="18"]
+position = Vector2(-11, 19)
+curve = SubResource("Curve2D_qrgkm")
+
+[node name="MovingInteractable" parent="Path2D3" index="0" instance=ExtResource("6_vqgpm")]
+position = Vector2(1254, 401)
+rotates = false
+loop = false
+script = ExtResource("7_wcydk")

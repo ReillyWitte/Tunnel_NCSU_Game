@@ -3,7 +3,7 @@ extends CollisionShape2D
 var entered = 0
 
 func _process(delta):
-	if Globals.mole_smoke == 1:
+	if Globals.mole_smoke == 2:
 		shape = null
 
 func _ready():
