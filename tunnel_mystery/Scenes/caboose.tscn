@@ -10,7 +10,7 @@ size = Vector2(258, 302)
 [node name="Main" instance=ExtResource("1_ewv76")]
 
 [node name="CollisionShape2D" parent="StaticBody2D2" index="0"]
-position = Vector2(-580, 124)
+position = Vector2(-550, 171)
 
 [node name="CollisionShape2D" parent="StaticBody2D4" index="0"]
 position = Vector2(127, 381)

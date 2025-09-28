@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://81alvu15tmao"]
+[gd_scene load_steps=11 format=3 uid="uid://81alvu15tmao"]
 
 [ext_resource type="PackedScene" uid="uid://cml8ag50tpsmv" path="res://Scenes/main.tscn" id="1_akk4n"]
 [ext_resource type="Texture2D" uid="uid://b3qollufwnp3g" path="res://Sprites/comfychairfront.png" id="2_bruu7"]
@@ -6,11 +6,25 @@
 [ext_resource type="Texture2D" uid="uid://dw1el1pf3u6ti" path="res://Sprites/table.png" id="4_cu6jp"]
 [ext_resource type="PackedScene" uid="uid://bn0xnotbbstob" path="res://Scenes/NPCs/eagle.tscn" id="5_cu6jp"]
 [ext_resource type="PackedScene" uid="uid://c8wv6wu2mlvc" path="res://Scenes/NPCs/lion.tscn" id="6_041ke"]
+[ext_resource type="PackedScene" uid="uid://5h4m60uytdbd" path="res://Scenes/NPCs/moving_mole.tscn" id="7_8oydd"]
+[ext_resource type="Script" uid="uid://bvjvmvo8dmvq0" path="res://Scenes/NPCs/fc_mole.gd" id="8_o2l57"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8oydd"]
 size = Vector2(92.921875, 85.890625)
 
+[sub_resource type="Curve2D" id="Curve2D_kh21p"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1254, 401, 0, 0, 0, 0, -101, 401)
+}
+point_count = 2
+
 [node name="Main2" instance=ExtResource("1_akk4n")]
+
+[node name="CollisionShape2D" parent="StaticBody2D2" index="0"]
+position = Vector2(-608, 168)
+
+[node name="CollisionShape2D" parent="StaticBody2D3" index="0"]
+position = Vector2(551, -2)
 
 [node name="Door" parent="." index="4"]
 next_car = "res://Scenes/engine.tscn"
@@ -166,3 +180,15 @@ position = Vector2(-376, -22)
 [node name="Lion" parent="." index="25" instance=ExtResource("6_041ke")]
 z_index = -2
 position = Vector2(276, -12)
+
+[node name="Path2D" type="Path2D" parent="." index="27"]
+curve = SubResource("Curve2D_kh21p")
+
+[node name="MovingInteractable" parent="Path2D" index="0" instance=ExtResource("7_8oydd")]
+visible = false
+position = Vector2(1254, 401)
+rotates = false
+loop = false
+script = ExtResource("8_o2l57")
+timeline = "mole_timeline"
+speed = 1.5
