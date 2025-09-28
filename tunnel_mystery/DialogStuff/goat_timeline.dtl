@@ -10,6 +10,7 @@ if Globals.goat_dialog == 0.0:
 		narrator: You hand her a dollar, and she gives you a rusty old coin. It doesn't seem worth much.
 		Esmeralda: Have a good one mister!
 		set {Globals.goat_dialog} = 1.0
+		set {Globals.coin} = 1.0
 	- Why do you keep checking your watch? | [if Globals.goat_interrogate == "1"] [else="hide"]
 		Esmeralda: Wait, are you suspicious of me? I'm just waiting for the snack cart. I am [b]starving[/b].
 		Esmeralda: I wouldn't hurt a fly.
