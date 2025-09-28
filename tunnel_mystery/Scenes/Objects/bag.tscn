@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2ceep68gfc7"]
+
+[ext_resource type="PackedScene" uid="uid://c6qnesbh3nh6u" path="res://Scenes/interactable.tscn" id="1_fgr3h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jjuxx"]
+size = Vector2(20, 138)
+
+[node name="Interactable" instance=ExtResource("1_fgr3h")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = null
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(635, 393)
+shape = SubResource("RectangleShape2D_jjuxx")

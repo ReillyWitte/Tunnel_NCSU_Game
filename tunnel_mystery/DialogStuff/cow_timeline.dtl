@@ -10,7 +10,7 @@ if Globals.cow_dialog == 0.0:
 				narrator: Some notable headlines include\:
 				narrator: [i]"Does Senator Freedom hate the working class?"[/i]
 				narrator: [i]"Major Fossil Fuel Bill Awaits Third Vote in Senate Stalemate"[/i]
-				narrator: [i]"Senator Freedom Votes to Ban Cigarettes[/i]
+				narrator: [i]"Senator Freedom Votes to Ban Cigarettes"[/i]
 				Meredith: Let me know if you need another look!
 				set {Globals.cow_dialog} = 1.0
 			- No

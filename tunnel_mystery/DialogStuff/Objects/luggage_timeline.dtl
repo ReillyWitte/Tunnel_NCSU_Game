@@ -1,0 +1,13 @@
+if Globals.luggage_dialog == 1.0:
+	narrator: The conductor's note tells you exactly who's luggage is who's.
+	set {Globals.luggage_labels} = 1.0
+	set {Globals.luggage_dialog} = 0.0
+elif Globals.luggage_dialog == 0.0:
+	narrator: The bag is locked shut.
+	if Globals.lockpick > 0.0:
+		narrator: Would you like to use a lockpick to open it?
+		- Yes
+			narrator: You wiggle the lock with your lockpicking supplies. The tools break, but not before the bag flies open.
+			set {Globals.lockpick} -= 1.0
+			narrator: Nothing notable seems to be inside.
+		- No
