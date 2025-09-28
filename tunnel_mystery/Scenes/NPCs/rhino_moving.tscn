@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://dahcdql2axi8s"]
+
+[ext_resource type="Script" uid="uid://cvkv4n42n81g1" path="res://Scenes/NPCs/rhino_dissolve.gd" id="1_gamlt"]
+[ext_resource type="Script" uid="uid://di6wg0v0x2aw6" path="res://Scenes/NPCs/rhino_moving.gd" id="2_gamlt"]
+[ext_resource type="Texture2D" uid="uid://x4sg2jnolcrt" path="res://Sprites/angryrhino.png" id="3_8qnji"]
+[ext_resource type="Texture2D" uid="uid://7o7ay3o7s21h" path="res://Sprites/happy rhino.png" id="4_gamlt"]
+[ext_resource type="Script" uid="uid://dujc5k8m7gqo8" path="res://Scenes/NPCs/collision_shape_2d.gd" id="5_gamlt"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2mw5h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_8qnji")
+}],
+"loop": true,
+"name": &"angry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_gamlt")
+}],
+"loop": true,
+"name": &"happy",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gamlt"]
+size = Vector2(106, 257)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_debwt"]
+size = Vector2(66, 181)
+
+[node name="MovingInteractable" type="PathFollow2D"]
+script = ExtResource("1_gamlt")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+script = ExtResource("2_gamlt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_2mw5h")
+animation = &"happy"
+autoplay = "angry"
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-17, 6.5)
+shape = SubResource("RectangleShape2D_gamlt")
+script = ExtResource("5_gamlt")
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Area2D"]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_debwt")

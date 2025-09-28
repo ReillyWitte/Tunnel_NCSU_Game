@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ruk7mt44gy70"]
+
+[ext_resource type="PackedScene" uid="uid://cml8ag50tpsmv" path="res://Scenes/main.tscn" id="1_n4s8n"]
+[ext_resource type="Texture2D" uid="uid://cm4fded8g1ssc" path="res://Sprites/LuggageCar.png" id="2_rvwm1"]
+
+[node name="Main" instance=ExtResource("1_n4s8n")]
+
+[node name="Door" parent="." index="4"]
+position = Vector2(1118, 450)
+next_car = "res://Scenes/sleeper_car.tscn"
+
+[node name="Door2" parent="." index="5"]
+position = Vector2(45, 450)
+
+[node name="TextureRect" parent="." index="7"]
+texture = ExtResource("2_rvwm1")
