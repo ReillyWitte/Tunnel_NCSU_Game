@@ -1,10 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://cml8ag50tpsmv"]
+[gd_scene load_steps=14 format=3 uid="uid://cml8ag50tpsmv"]
 
 [ext_resource type="PackedScene" uid="uid://yegohmvxjpig" path="res://Scenes/player.tscn" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://comnemed8c1i8" path="res://Scenes/main.gd" id="1_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://jdgmgd2i5rws" path="res://Scenes/door.tscn" id="2_bo1nx"]
 [ext_resource type="Texture2D" uid="uid://djka28ynht0be" path="res://Sprites/Croppedcabin2.png" id="3_kry3j"]
 [ext_resource type="AudioStream" uid="uid://d23vyu0vdblfw" path="res://Audio Files/metaldoor.mp3" id="4_jjvhh"]
+[ext_resource type="Script" uid="uid://bmshojjv0bi2r" path="res://Scenes/tunnel.gd" id="6_6bp64"]
+[ext_resource type="Texture2D" uid="uid://cvd3nlgpnxx8s" path="res://Sprites/background full.png" id="7_344ge"]
+[ext_resource type="Script" uid="uid://c6215vuol8ms2" path="res://addons/sudden_fade_plugin/fade_transition_manager.gd" id="8_ynf5e"]
+[ext_resource type="PackedScene" uid="uid://bmu8wlits5ww7" path="res://addons/sudden_fade_plugin/demo/room2.tscn" id="9_hptm8"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ig7tw"]
 normal = Vector2(-1, 0)
@@ -51,12 +55,12 @@ position = Vector2(0, 306)
 shape = SubResource("WorldBoundaryShape2D_1bvp3")
 
 [node name="Door" parent="." instance=ExtResource("2_bo1nx")]
-position = Vector2(1109, 346)
+position = Vector2(1113, 370)
 scale = Vector2(0.5, 0.5)
 next_car = "res://Scenes/coach1.tscn"
 
 [node name="Door2" parent="." instance=ExtResource("2_bo1nx")]
-position = Vector2(37, 348)
+position = Vector2(47, 370)
 scale = Vector2(-0.5, 0.5)
 
 [node name="Node2D" parent="." instance=ExtResource("1_ig7tw")]
@@ -88,3 +92,33 @@ position = Vector2(198, -147)
 stream = ExtResource("4_jjvhh")
 volume_db = -3.0
 autoplay = true
+
+[node name="tunnel" type="ParallaxBackground" parent="."]
+layer = -10000
+scale = Vector2(0.5, 0.5)
+transform = Transform2D(0.5, 0, 0, 0.5, 0, 0)
+script = ExtResource("6_6bp64")
+scroll_speed = Vector2(-750, 0)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="tunnel"]
+z_index = -4096
+texture_repeat = 2
+position = Vector2(840, 266)
+scale = Vector2(1.035, 1.035)
+motion_scale = Vector2(2, 2)
+motion_mirroring = Vector2(2000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="tunnel/ParallaxLayer"]
+z_index = -4096
+position = Vector2(1122.7053, 502.41547)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("7_344ge")
+
+[node name="FadeTransitionManager" type="ColorRect" parent="."]
+z_index = 70
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("8_ynf5e")
+next_scene = ExtResource("9_hptm8")
+metadata/_custom_type_script = "uid://c6215vuol8ms2"

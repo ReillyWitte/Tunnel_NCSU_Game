@@ -1,11 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://bmvbi5brk6n3m"]
+[gd_scene load_steps=6 format=3 uid="uid://bmvbi5brk6n3m"]
 
 [ext_resource type="PackedScene" uid="uid://cml8ag50tpsmv" path="res://Scenes/main.tscn" id="1_p2scx"]
 [ext_resource type="Texture2D" uid="uid://dxihhccj250qo" path="res://Sprites/Chair.png" id="2_1hbbv"]
-[ext_resource type="Script" uid="uid://c6215vuol8ms2" path="res://addons/sudden_fade_plugin/fade_transition_manager.gd" id="5_xiufw"]
-[ext_resource type="PackedScene" uid="uid://bmu8wlits5ww7" path="res://addons/sudden_fade_plugin/demo/room2.tscn" id="6_atycd"]
-[ext_resource type="Texture2D" uid="uid://cvd3nlgpnxx8s" path="res://Sprites/background full.png" id="7_1e2j1"]
-[ext_resource type="Script" uid="uid://bmshojjv0bi2r" path="res://Scenes/tunnel.gd" id="7_20q3q"]
 [ext_resource type="PackedScene" uid="uid://cfm2wcqna76q3" path="res://Scenes/NPCs/herring.tscn" id="7_atycd"]
 [ext_resource type="PackedScene" uid="uid://c3imoo0jfm2ph" path="res://Scenes/NPCs/dog.tscn" id="8_20q3q"]
 
@@ -14,29 +10,18 @@ size = Vector2(81.5, 135)
 
 [node name="Main" instance=ExtResource("1_p2scx")]
 
-[node name="FadeTransitionManager" type="ColorRect" parent="." index="0"]
-z_index = 70
-offset_right = 40.0
-offset_bottom = 40.0
-color = Color(0, 0, 0, 1)
-script = ExtResource("5_xiufw")
-next_scene = ExtResource("6_atycd")
-metadata/_custom_type_script = "uid://c6215vuol8ms2"
-
-[node name="Door" parent="." index="5"]
-position = Vector2(1113, 370)
+[node name="Door" parent="." index="4"]
 next_side = 1
 
-[node name="Door2" parent="." index="6"]
-position = Vector2(47, 370)
-next_car = "res://Scenes/sleeper.tscn"
+[node name="Door2" parent="." index="5"]
+next_car = "res://Scenes/dining.tscn"
 next_side = 2
 
-[node name="TextureRect" parent="." index="8"]
+[node name="TextureRect" parent="." index="7"]
 offset_left = 4.000004
 offset_right = 4.000004
 
-[node name="Chair1" type="StaticBody2D" parent="." index="10"]
+[node name="Chair1" type="StaticBody2D" parent="." index="9"]
 position = Vector2(-10, -5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair1" index="0"]
@@ -49,7 +34,7 @@ position = Vector2(152, 615)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair2" type="StaticBody2D" parent="." index="11"]
+[node name="Chair2" type="StaticBody2D" parent="." index="10"]
 z_index = -170
 position = Vector2(-11, -292)
 
@@ -63,7 +48,7 @@ position = Vector2(152, 615)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair3" type="StaticBody2D" parent="." index="12"]
+[node name="Chair3" type="StaticBody2D" parent="." index="11"]
 z_index = -170
 position = Vector2(266, -295)
 
@@ -77,7 +62,7 @@ position = Vector2(152, 615)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair4" type="StaticBody2D" parent="." index="13"]
+[node name="Chair4" type="StaticBody2D" parent="." index="12"]
 position = Vector2(266, -6)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair4" index="0"]
@@ -90,7 +75,7 @@ position = Vector2(152, 615)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair5" type="StaticBody2D" parent="." index="14"]
+[node name="Chair5" type="StaticBody2D" parent="." index="13"]
 z_index = -170
 position = Vector2(543, -295)
 
@@ -104,7 +89,7 @@ position = Vector2(152, 615)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair6" type="StaticBody2D" parent="." index="15"]
+[node name="Chair6" type="StaticBody2D" parent="." index="14"]
 position = Vector2(543, -5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair6" index="0"]
@@ -117,7 +102,7 @@ position = Vector2(152, 615)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair7" type="StaticBody2D" parent="." index="16"]
+[node name="Chair7" type="StaticBody2D" parent="." index="15"]
 z_index = -170
 position = Vector2(809, -295)
 
@@ -131,7 +116,7 @@ position = Vector2(152, 615)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Chair8" type="StaticBody2D" parent="." index="17"]
+[node name="Chair8" type="StaticBody2D" parent="." index="16"]
 position = Vector2(809, -5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair8" index="0"]
@@ -144,32 +129,11 @@ position = Vector2(152, 615)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("RectangleShape2D_yipkt")
 
-[node name="Herring" parent="." index="18" instance=ExtResource("7_atycd")]
+[node name="Herring" parent="." index="17" instance=ExtResource("7_atycd")]
 z_index = -100
 position = Vector2(87, -45)
 timeline = "herring_timeline"
 
-[node name="tunnel" type="ParallaxBackground" parent="." index="20"]
-layer = -10000
-scale = Vector2(0.5, 0.5)
-transform = Transform2D(0.5, 0, 0, 0.5, 0, 0)
-script = ExtResource("7_20q3q")
-scroll_speed = Vector2(-750, 0)
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="tunnel" index="0"]
-z_index = -4096
-texture_repeat = 2
-position = Vector2(840, 266)
-scale = Vector2(1.035, 1.035)
-motion_scale = Vector2(2, 2)
-motion_mirroring = Vector2(2000, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="tunnel/ParallaxLayer" index="0"]
-z_index = -4096
-position = Vector2(1122.7053, 502.41547)
-scale = Vector2(2.5, 2.5)
-texture = ExtResource("7_1e2j1")
-
-[node name="Dog" parent="." index="21" instance=ExtResource("8_20q3q")]
+[node name="Dog" parent="." index="19" instance=ExtResource("8_20q3q")]
 position = Vector2(-174, 224)
 timeline = "dog_timeline"

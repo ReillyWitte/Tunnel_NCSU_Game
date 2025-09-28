@@ -1,0 +1,76 @@
+[gd_scene load_steps=8 format=3 uid="uid://c371dfsgpurxx"]
+
+[ext_resource type="PackedScene" uid="uid://cml8ag50tpsmv" path="res://Scenes/main.tscn" id="1_hb68l"]
+[ext_resource type="PackedScene" uid="uid://pqcs84wu2sxs" path="res://Scenes/NPCs/moving_bat.tscn" id="2_uknxr"]
+[ext_resource type="Texture2D" uid="uid://c7nfjxrx70hha" path="res://Sprites/SleepingBoothOpen.png" id="3_vqgpm"]
+[ext_resource type="Texture2D" uid="uid://cyt8s62ngs0hw" path="res://Sprites/SleepingBoothClosed.png" id="4_wcydk"]
+[ext_resource type="PackedScene" uid="uid://48mmcgia6sh5" path="res://Scenes/NPCs/sleeping_cat.tscn" id="5_qrgkm"]
+
+[sub_resource type="Curve2D" id="Curve2D_ekdvr"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 800, 131, 0, 0, 0, 0, 1051, 131)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_hki7d"]
+
+[node name="Main" instance=ExtResource("1_hb68l")]
+
+[node name="TextureRect" parent="." index="7"]
+metadata/_edit_use_anchors_ = true
+
+[node name="FadeTransitionManager" parent="." index="11"]
+metadata/_edit_use_anchors_ = true
+
+[node name="Path2D" type="Path2D" parent="." index="12"]
+curve = SubResource("Curve2D_ekdvr")
+
+[node name="MovingInteractable" parent="Path2D" index="0" instance=ExtResource("2_uknxr")]
+z_index = -1
+position = Vector2(892.95856, 131)
+progress = 92.9596
+loop = false
+timeline = "bat_timeline"
+idle_animation = "idle"
+moving_animation = "flying"
+speed = 200.0
+
+[node name="sleeper" type="StaticBody2D" parent="." index="13"]
+z_index = -1
+position = Vector2(7, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="sleeper" index="0"]
+z_index = -1
+position = Vector2(218, 204)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_vqgpm")
+
+[node name="sleeper2" type="StaticBody2D" parent="." index="14"]
+z_index = -1
+position = Vector2(356, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="sleeper2" index="0"]
+z_index = -1
+position = Vector2(218, 204)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_wcydk")
+
+[node name="sleeper3" type="StaticBody2D" parent="." index="15"]
+z_index = -1
+position = Vector2(721, -4)
+
+[node name="Sprite2D" type="Sprite2D" parent="sleeper3" index="0"]
+z_index = -1
+position = Vector2(206, 208.00002)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_vqgpm")
+
+[node name="Path2D2" type="Path2D" parent="." index="16"]
+curve = SubResource("Curve2D_hki7d")
+
+[node name="sleeping cat" parent="Path2D2" index="0" instance=ExtResource("5_qrgkm")]
+z_index = -2
+position = Vector2(230, 213)
+timeline = "cat_timeline"
+idle_animation = "sleeping"
+moving_animation = "sleeping_noticket"

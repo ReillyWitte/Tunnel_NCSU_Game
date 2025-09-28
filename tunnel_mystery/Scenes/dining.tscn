@@ -1,90 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://dygxesllinm01"]
+[gd_scene load_steps=2 format=3 uid="uid://dygxesllinm01"]
 
-[ext_resource type="Script" uid="uid://comnemed8c1i8" path="res://Scenes/main.gd" id="1_8t3ug"]
-[ext_resource type="PackedScene" uid="uid://jdgmgd2i5rws" path="res://Scenes/door.tscn" id="2_btlr2"]
-[ext_resource type="PackedScene" uid="uid://yegohmvxjpig" path="res://Scenes/player.tscn" id="3_dfvxl"]
-[ext_resource type="Texture2D" uid="uid://djka28ynht0be" path="res://Sprites/Croppedcabin2.png" id="4_kimbo"]
-[ext_resource type="AudioStream" uid="uid://d23vyu0vdblfw" path="res://Audio Files/metaldoor.mp3" id="5_tmpcd"]
+[ext_resource type="PackedScene" uid="uid://cml8ag50tpsmv" path="res://Scenes/main.tscn" id="1_6qqn2"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ig7tw"]
-normal = Vector2(-1, 0)
-distance = 3.0
+[node name="Main" instance=ExtResource("1_6qqn2")]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0xm2m"]
-normal = Vector2(0, 1)
-distance = 35.0
+[node name="Door" parent="." index="4"]
+next_car = "res://Scenes/coach2.tscn"
+next_side = 1
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_h2yge"]
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1bvp3"]
-normal = Vector2(1, 0)
-
-[node name="Main" type="Node2D"]
-script = ExtResource("1_8t3ug")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(1152, 648)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, -288)
-shape = SubResource("WorldBoundaryShape2D_ig7tw")
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
-position = Vector2(1152, 0)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(-605, 255)
-shape = SubResource("WorldBoundaryShape2D_0xm2m")
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
-position = Vector2(0, 648)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
-position = Vector2(549, 0)
-shape = SubResource("WorldBoundaryShape2D_h2yge")
-
-[node name="StaticBody2D4" type="StaticBody2D" parent="."]
-position = Vector2(0, -1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
-position = Vector2(0, 306)
-shape = SubResource("WorldBoundaryShape2D_1bvp3")
-
-[node name="Door" parent="." instance=ExtResource("2_btlr2")]
-position = Vector2(1109, 346)
-scale = Vector2(0.5, 0.5)
-next_car = "res://Scenes/coach1.tscn"
-
-[node name="Door2" parent="." instance=ExtResource("2_btlr2")]
-position = Vector2(37, 348)
-scale = Vector2(-0.5, 0.5)
-
-[node name="Node2D" parent="." instance=ExtResource("3_dfvxl")]
-position = Vector2(569, 376)
-
-[node name="TextureRect" type="TextureRect" parent="."]
-show_behind_parent = true
-z_index = -1000
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 1.0
-offset_top = 1.0000002
-offset_right = 1.0
-offset_bottom = 1.0000002
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.57, 0.57)
-texture = ExtResource("4_kimbo")
-expand_mode = 2
-stretch_mode = 2
-
-[node name="StaticBody2D5" type="StaticBody2D" parent="."]
-position = Vector2(198, -147)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
-
-[node name="doorsound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_tmpcd")
-volume_db = -3.0
-autoplay = true
+[node name="Door2" parent="." index="5"]
+next_car = "res://Scenes/sleeper.tscn"
+next_side = 2
