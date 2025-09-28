@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://brhbwbi8qjp3p"]
+[gd_scene load_steps=15 format=3 uid="uid://brhbwbi8qjp3p"]
 
 [ext_resource type="PackedScene" uid="uid://cml8ag50tpsmv" path="res://Scenes/main.tscn" id="1_ckq7p"]
 [ext_resource type="Texture2D" uid="uid://bp2kvmjg4pw7" path="res://Sprites/Loco2.png" id="2_y0ab4"]
 [ext_resource type="Texture2D" uid="uid://cbbk1t7gw4q34" path="res://Sprites/Furnace.png" id="3_5oc0h"]
 [ext_resource type="Script" uid="uid://btxo2padr6g4r" path="res://Scenes/engine_door.gd" id="3_apa4b"]
+[ext_resource type="Script" uid="uid://c5sanhothujhj" path="res://Scenes/collision_shape_2d.gd" id="4_68yqp"]
 [ext_resource type="PackedScene" uid="uid://5h4m60uytdbd" path="res://Scenes/NPCs/moving_mole.tscn" id="4_wdu0v"]
 [ext_resource type="Texture2D" uid="uid://cmiequte61cag" path="res://Sprites/LocoWall.png" id="5_wdu0v"]
 [ext_resource type="PackedScene" uid="uid://dq1f1kwjca5vr" path="res://Scenes/NPCs/otter.tscn" id="7_ld8vk"]
@@ -70,6 +71,7 @@ script = ExtResource("3_apa4b")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7" index="1"]
 position = Vector2(670.25, 450.75)
 shape = SubResource("RectangleShape2D_68yqp")
+script = ExtResource("4_68yqp")
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="." index="14"]
 

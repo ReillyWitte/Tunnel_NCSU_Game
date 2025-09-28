@@ -38,3 +38,4 @@ func _process(delta):
 		visible = 0
 		Globals.mole_dialog = 2
 		
+		
